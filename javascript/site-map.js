@@ -21,7 +21,9 @@ var secSectionsLinks = [["Menu", "Specials", "Gift Cards","Events/Booking"],[]
 
 var canvas;
 window.onload = function(){
-	$("#header").load("header.html");
+	// $("#header").load("header.html");
+	//var link = document.querySelector('link[rel="import"]');
+	//body.appendChild(link.import); 
 	canvas = document.getElementById("map-layout");
 	canvas.width = 800;
 	canvas.height = 500;
