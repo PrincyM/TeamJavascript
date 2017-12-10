@@ -1,3 +1,8 @@
 #siteloader {
 	border: 5px solid red;
 }
+#map-layout{
+	border: 1px dashed blue;
+	width: 800px;
+	height: 800px;	
+}
