@@ -15,12 +15,16 @@
 var mainSections = ["Products/Services","Location","Site Map","Constest","About Us"];
 var secSections = [["Menu", "Specials", "Gift Cards","Events/Booking"],[]
 	,[] ,[] ,["Contact Us", "Carreers"]];
+var mainSectionsLinks = ["Products/Services","Location","Site Map","Constest","About Us"];
+var secSectionsLinks = [["Menu", "Specials", "Gift Cards","Events/Booking"],[]
+	,[] ,[] ,["Contact Us", "Carreers"]];
 
 var canvas;
 window.onload = function(){
+	$("#header").load("header.html");
 	canvas = document.getElementById("map-layout");
 	canvas.width = 800;
-	canvas.height = 800;
+	canvas.height = 500;
 	drawLayout();
 }
 
