@@ -31,6 +31,11 @@ window.onload = function(){
 }
 
 
+
+//////////////////////////////////////////////////////////////////
+// function that draws the site map with the given arrays.
+//////////////////////////////////////////////////////////////////
+
 function drawLayout(){
 
 	var canvasWidth = canvas.width;
@@ -40,7 +45,7 @@ function drawLayout(){
 	var margin = 30;
 
 //First we draw the home. only 1 block in that row.
-	draw((canvasWidth-boxWidth)/2,margin,boxWidth,boxHeigth,"Home");
+	draw((canvasWidth-boxWidth)/2,margin,boxWidth,boxHeigth,"Home","home.html");
 
 
 //now we define some properties of the main sections
@@ -52,7 +57,7 @@ function drawLayout(){
 	for(var i = 0; i< mainSections.length; i++)
 	{
 		draw(i*(hmargin)-boxWidth+hmargin,margin*2+boxHeigth,
-			boxWidth,boxHeigth,mainSections[i]);
+			boxWidth,boxHeigth,mainSections[i],mainSectionsLinks[i][j]);
 	}
 
 //finaly we do the same thing for the secondary sections
@@ -62,12 +67,15 @@ function drawLayout(){
 		{
 			draw(i*(hmargin)-boxWidth*j+hmargin+10,
 				margin*(3 + j)+boxHeigth*(j+1)/2,
-				boxWidth,boxHeigth,secSections[i][j]);
+				boxWidth,boxHeigth,secSections[i][j],secSectionsLinks[i][j]);
 		}
 	}
 }
 
-function draw(x,y,a,b,text){
+//////////////////////////////////////////////////////////////////
+// function that draws a div with the given coordinates, size and text inside.
+//////////////////////////////////////////////////////////////////
+function draw(x,y,a,b,text,link){
 //We draw the rectangle with the data given	
 	// var ctx = canvas.getContext("2d");
 	// console.log(a);
@@ -91,5 +99,41 @@ function draw(x,y,a,b,text){
 	newBox.style.textAlign = "center";
 	newBox.style.verticalAlign = "middle";
 	newBox.style.lineHeight = b + "px";
+	newBox.addEventListener("mouseover", function(){onSiteDivMouseOver(link)});
+//	newBox.addEventListener("mouseout", onSiteDivMouseOut(link));
 	canvas.appendChild(newBox);
+}
+
+function onSiteDivMouseOver (link){
+	var scale = 0.4
+    document.getElementById("preview").innerHTML = "";
+	var ifrm = document.createElement("iframe");
+    ifrm.style.webkitTransform = "Scale("+ scale +")";
+    ifrm.style.transformOrigin = "0 0";
+	ifrm.id = "ifrm-site";
+	//the next line, we have to change the secon argument for the actual link received. 
+	ifrm.setAttribute("src", 	"http://www.emol.com");
+	document.getElementById("preview").appendChild(ifrm);
+	ifrm.style.width = ( 1 / scale * 100) + "%";
+    ifrm.style.height = ( 1 / scale * 100) + "%";
+    ifrm.style.margin = "0 auto";
+
+	console.log(ifrm.children);
+
+
+
+	// var prev = document.createElement("object");
+	// prev.id = "new-page"
+	// prev.style.width = "300px";
+	// prev.style.height = "400px";
+	// prev.data = "site-map.html";
+	// prev.style.margin = "0 auto";
+	// prev.style.display = "block";
+	// document.getElementById("preview").innerHTML = "";// '<object id="new-page" data="contest.html"></object>';
+	// document.getElementById("preview").appendChild(prev);
+	// var newpage = document.getElementById("preview").children[0];
+	// console.log(newpage);
+	//$("#siteloader").html('<object id="new-page" data="http://emol.com/"></object>');
+	//$("#new-page").css("width","1080px")
+	//$("#new-page").css("height","1600");	
 }
