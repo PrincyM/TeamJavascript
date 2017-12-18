@@ -99,25 +99,29 @@ function draw(x,y,a,b,text,link){
 	newBox.style.textAlign = "center";
 	newBox.style.verticalAlign = "middle";
 	newBox.style.lineHeight = b + "px";
-	newBox.addEventListener("mouseover", function(){onSiteDivMouseOver(link)});
+	newBox.addEventListener("click", function(){onSiteDivMouseOver("http://www.emol.com")});
 //	newBox.addEventListener("mouseout", onSiteDivMouseOut(link));
 	canvas.appendChild(newBox);
 }
 
 function onSiteDivMouseOver (link){
-	var scale = 0.4
-    document.getElementById("preview").innerHTML = "";
+	var scale = .4;
+	$("#preview").html = "";	
+    //document.getElementById("preview").innerHTML = "";
 	var ifrm = document.createElement("iframe");
+	ifrm.id = "ifrm-site";
+	document.getElementById("preview").appendChild(ifrm);
+	
     ifrm.style.webkitTransform = "Scale("+ scale +")";
     ifrm.style.transformOrigin = "0 0";
-	ifrm.id = "ifrm-site";
 	//the next line, we have to change the secon argument for the actual link received. 
-	ifrm.setAttribute("src", 	"http://www.emol.com");
-	document.getElementById("preview").appendChild(ifrm);
+	ifrm.setAttribute("src", 	link);
 	ifrm.style.width = ( 1 / scale * 100) + "%";
     ifrm.style.height = ( 1 / scale * 100) + "%";
     ifrm.style.margin = "0 auto";
-
+    ifrm.style.outline = "1px solid transparent";
+    //$("#ifrm-site").hide();
+    //$("#ifrm-site").slideToggle(10000);
 	console.log(ifrm.children);
 
 

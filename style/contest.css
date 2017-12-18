@@ -1,0 +1,22 @@
+#game{
+	height: 360px;
+	width: 640px;
+	border:1px dashed blue;
+}
+.tttfield{
+	height: 116px;
+	width: 210px;
+	display: inline-block;
+}
+.leftborder{
+	border-left: 2px solid black;
+}
+.rightborder{
+	border-right: 2px solid black;
+}
+.bottomborder{
+	border-bottom: 2px solid black;
+}
+.topborder{
+	border-top: 2px solid black;
+}
