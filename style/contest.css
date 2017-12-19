@@ -30,3 +30,9 @@
 	background-position: center;
 	background-repeat: none;
 }
+.animated{
+	-moz-transition: 1s;
+  	-o-transition: 1s;
+  	-webkit-transition: 1s;
+  	transition: 1s;
+}

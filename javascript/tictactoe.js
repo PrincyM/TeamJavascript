@@ -315,6 +315,7 @@ class Tictactoe{
 				$("#game").append(newfield);
 				$("#"+i+j).addClass("tttfield");
 				$("#"+i+j).click(userPlay);
+				$("#"+i+j).addClass("animated")
 				
 
 				// add borders deppending on possitions
