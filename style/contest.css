@@ -20,3 +20,13 @@
 .topborder{
 	border-top: 2px solid black;
 }
+
+.playfield{
+	background-color: #777;
+}
+.clogo{
+	/*background-image: url("images/clogo.png");*/
+	background-size: 80%;
+	background-position: center;
+	background-repeat: none;
+}
