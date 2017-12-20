@@ -17,10 +17,11 @@ class Tictactoe{
 		this.boardfield = [[0,0,0],[0,0,0],[0,0,0]];
 		console.log(this.boardfield);
 		console.log("start load");
-		this.drawInicialField();
+		drawInicialField();
 		
 
 		//if the AI starts, we ask the game to play its next move
+		this.pcstart = pcstart;
 		if(pcstart)
 		{
 			this.play();
@@ -39,7 +40,7 @@ class Tictactoe{
 		{
 			//do whatever is necessary for when there is a winner
 			console.log("winner:yes");
-			this.updateAfterWinner();
+			this.updateAfterWinner(winner);
 			return;
 		}
 		console.log("winner:no");
@@ -78,7 +79,7 @@ class Tictactoe{
 		//console.log(this.boardfield);
 		//if it's available, make the play (dom and boardfield) 
 		console.log("correct play");
-		this.updateField(2,move);
+		updateField(2,move,this.pcstart);
 		// $("#" + move).css("background","red");
 		this.boardfield[xy[0]][xy[1] ]= 2;
 		this.play();
@@ -90,20 +91,19 @@ class Tictactoe{
 		var possibleswins = ["0020","0002","0022","0121","0220","0222","1012","2022"]; 
 		for(var i = 0; i < possibleswins.length; i++)
 		{
-			if(possibleswins[i]=="0002")
-				console.log(boardtemp);
-
 			if(this.checkline(1,possibleswins[i], boardtemp))
 			{
 				console.log(possibleswins[i]);
 				console.log(boardtemp);
+				drawResult(1,possibleswins[i]);
 				return 1;
 			}
 			else if(this.checkline(2,possibleswins[i],boardtemp))
 			{
 
 				console.log(possibleswins[i]);
-				console.log(boardtemp)
+				console.log(boardtemp);
+				drawResult(2,possibleswins[i]);
 				return 2
 			}
 		}
@@ -134,29 +134,27 @@ class Tictactoe{
 	}
 
 	//returns a bull depending if the current board is full
-	isboardfull()
-	{
+	isboardfull(){
 		return (!this.boardfield[0].includes(0)) &&
 			(!this.boardfield[1].includes(0)) &&
 			(!this.boardfield[2].includes(0));
 	}
 
 	//decide which is the next play, draw it and update the board
-	nextPlay()
-	{
+	nextPlay(){
 		//console.log(this.boardfield);
 		var pos = this.decideNextPlay();			
 		var xy = this.stringToIntArray(pos);
 
 		this.boardfield[xy[0]][xy[1]]=1;
-		this.updateField(1,pos);
+		updateField(1,pos,this.pcstart);
 
 		var winner = this.checkwinner(this.boardfield);
 		if(winner)
 		{
 			//do whatever is necessary for when there is a winner
 			console.log("winner:yes");
-			this.updateAfterWinner();
+			this.updateAfterWinner(winner);
 			return;
 		}
 
@@ -247,117 +245,87 @@ class Tictactoe{
 		}
 	}
 
-
-
-	stringToIntArray(pos)
-	{
+	stringToIntArray(pos){
 		return [parseInt(pos.substring(0,1)),parseInt(pos.substring(1,2))];
 	}
 
-	updateAfterWinner()
-	{
-		this.blockDivClicks();
+	updateAfterWinner(user)	{
+		blockDivClicks();
 	}
 
 ////////////////////////////////////////////////////
 //drawing methids
 //////////////////////////////////////////////////
-	
-	blockDivClicks(){
-		for(var i = 0; i < 3; i++)
-			for(var j = 0; j < 3; j++)
-				$('#' + i + j).prop('onclick',null).off('click');
-	}
-
-	drawInicialField()
-	{
-		for(var i = 0; i < 3; i++)
-		{
-			for(var j = 0; j < 3; j++)
-			{
-				var newfield = $("<div id='"+i+j+"'></div>");
-				//$("btn_hard")
-				$("#game").append(newfield);
-				$("#"+i+j).addClass("tttfield");
-				$("#"+i+j).click(userPlay);
-				
-
-				// add borders deppending on possitions
-				//console.log(i +"" + j);
-				if( j == 0 )
-				{
-					$("#" + i + j ).addClass("rightborder");
-					//console.log("i = 0");
-				}
-				else if( j == 2 )
-				{
-					$("#" + i + j ).addClass("leftborder");
-					//console.log("i = 2");
-				}
-				if( i == 2 )
-				{
-					$("#" + i + j ).addClass("topborder");
-					//console.log("j = 0");
-				}
-				else if( i == 0 )
-				{
-					$("#" + i + j ).addClass("bottomborder");
-					//console.log("j = 2");
-				}
-			}
-		}
-		console.log("finish drawing");for(var i = 0; i < 3; i++)
-		{
-			for(var j = 0; j < 3; j++)
-			{
-				var newfield = $("<div id='"+i+j+"'></div>");
-				//$("btn_hard")
-				$("#game").append(newfield);
-				$("#"+i+j).addClass("tttfield");
-				$("#"+i+j).click(userPlay);
-				$("#"+i+j).addClass("animated")
-				
-
-				// add borders deppending on possitions
-				//console.log(i +"" + j);
-				if( j == 0 )
-				{
-					$("#" + i + j ).addClass("rightborder");
-					//console.log("i = 0");
-				}
-				else if( j == 2 )
-				{
-					$("#" + i + j ).addClass("leftborder");
-					//console.log("i = 2");
-				}
-				if( i == 2 )
-				{
-					$("#" + i + j ).addClass("topborder");
-					//console.log("j = 0");
-				}
-				else if( i == 0 )
-				{
-					$("#" + i + j ).addClass("bottomborder");
-					//console.log("j = 2");
-				}
-			}
-		}
-		console.log("finish drawing");
-	}
-//draws the image we want (by user int) on the position we want (by pos string)
-	updateField(user, pos)
-	{	
-		if(user == 1)
-		{
-			$("#" + pos).css("background","blue");
-		}
-		else 
-		{
-			$("#" + pos).css("background-image","url(\"images/clogo.png\")");
-			$("#" + pos).addClass("clogo");
-			// $("#" + pos).css()
-			// $("#" + pos).css("background","red");
-		}
-	}
-
 }
+
+function blockDivClicks(){
+	for(var i = 0; i < 3; i++)
+		for(var j = 0; j < 3; j++)
+			$('#' + i + j).prop('onclick',null).off('click');
+}
+
+function drawInicialField(){
+	for(var i = 0; i < 3; i++)
+	{
+		for(var j = 0; j < 3; j++)
+		{
+			var newfield = $("<div id='"+i+j+"'></div>");
+			//$("btn_hard")
+			$("#game").append(newfield);
+			$("#"+i+j).addClass("tttfield");
+			$("#"+i+j).click(userPlay);
+			
+
+			// add borders deppending on possitions
+			//console.log(i +"" + j);
+			if( j == 0 )
+			{
+				$("#" + i + j ).addClass("rightborder");
+				//console.log("i = 0");
+			}
+			else if( j == 2 )
+			{
+				$("#" + i + j ).addClass("leftborder");
+				//console.log("i = 2");
+			}
+			if( i == 2 )
+			{
+				$("#" + i + j ).addClass("topborder");
+				//console.log("j = 0");
+			}
+			else if( i == 0 )
+			{
+				$("#" + i + j ).addClass("bottomborder");
+				//console.log("j = 2");
+			}
+		}
+	}
+	console.log("finish drawing");
+}
+//draws the image we want (by user int) on the position we want (by pos string)
+function updateField(user, pos, pcstart){	
+	var images;
+	if(pcstart)
+		images = ["\"images/alogo.png\"","\"images/clogo.png\""];
+	else
+		images = ["\"images/clogo.png\"","\"images/alogo.png\""];
+
+	if(user == 1)
+	{	
+		$("#" + pos).css("background-image","url(" + images[user-1] + ")");
+		$("#" + pos).addClass("clogo");
+		// $("#" + pos).css("background","blue");
+	}
+	else 
+	{
+		$("#" + pos).css("background-image","url(" + images[user-1] + ")");
+		$("#" + pos).addClass("clogo");
+		// $("#" + pos).css()
+		// $("#" + pos).css("background","red");
+	}
+}
+// draw UI depending on the user who won, 0 for draw, 1 for PC and 2 for user
+function drawResult(user){
+	//draw a line if there is a winner
+}
+
