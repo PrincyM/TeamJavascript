@@ -303,23 +303,43 @@ function drawInicialField(){
 	console.log("finish drawing");
 }
 //draws the image we want (by user int) on the position we want (by pos string)
-function updateField(user, pos, pcstart){	
-	var images;
-	if(pcstart)
-		images = ["\"images/alogo.png\"","\"images/clogo.png\""];
-	else
-		images = ["\"images/clogo.png\"","\"images/alogo.png\""];
 
+
+
+function updateField(user, pos, pcstart){	
+	var images = [["\"images/alogo.png\"","alogo"],["\"images/clogo.png\"","clogo"]];
+	// console.log(images);
+	// console.log(images[0]);
 	if(user == 1)
 	{	
-		$("#" + pos).css("background-image","url(" + images[user-1] + ")");
-		$("#" + pos).addClass("clogo");
+		var image;
+		var class1;
+		if(pcstart){
+			image = images[0][0];
+			class1 = images[0][1]
+		}
+		else{
+			image = images[1][0];
+			class1 = images[1][1];
+		}
+		$("#" + pos).css("background-image","url(" + image + ")");
+		$("#" + pos).addClass(class1);
 		// $("#" + pos).css("background","blue");
 	}
 	else 
 	{
-		$("#" + pos).css("background-image","url(" + images[user-1] + ")");
-		$("#" + pos).addClass("clogo");
+		var image;
+		var class1;
+		if(!pcstart){
+			image = images[0][0];
+			class1 = images[0][1]
+		}
+		else{
+			image = images[1][0];
+			class1 = images[1][1];
+		}
+		$("#" + pos).css("background-image","url(" + image + ")");
+		$("#" + pos).addClass(class1);
 		// $("#" + pos).css()
 		// $("#" + pos).css("background","red");
 	}
@@ -329,3 +349,6 @@ function drawResult(user){
 	//draw a line if there is a winner
 }
 
+function drawlogo(user,pos,start){
+
+}
