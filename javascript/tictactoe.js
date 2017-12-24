@@ -12,6 +12,8 @@ class Tictactoe{
 //////////////////////////////////////
 
 	load(pcstart){
+		//show a welcome message
+		animateText("messages", "Welcome dear comrad!",2);
 
 		//create all the divs for the board
 		this.boardfield = [[0,0,0],[0,0,0],[0,0,0]];
@@ -25,7 +27,10 @@ class Tictactoe{
 		if(pcstart)
 		{
 			this.play();
+			//setTimeout(play,2);
 		}
+		
+		$("#btn_pagain").removeAttr('disabled', )
 	}
 
 ///////////////////////////////////////
@@ -80,6 +85,8 @@ class Tictactoe{
 		//if it's available, make the play (dom and boardfield) 
 		console.log("correct play");
 		updateField(2,move,this.pcstart);
+		//blockDivClicks();
+		//setTimeout(updateField,2000,2,move,this.pcstart);
 		// $("#" + move).css("background","red");
 		this.boardfield[xy[0]][xy[1] ]= 2;
 		this.play();
@@ -95,7 +102,7 @@ class Tictactoe{
 			{
 				console.log(possibleswins[i]);
 				console.log(boardtemp);
-				drawResult(1,possibleswins[i]);
+				this.winningPlay = possibleswins[i];
 				return 1;
 			}
 			else if(this.checkline(2,possibleswins[i],boardtemp))
@@ -103,7 +110,8 @@ class Tictactoe{
 
 				console.log(possibleswins[i]);
 				console.log(boardtemp);
-				drawResult(2,possibleswins[i]);
+				this.winningPlay = possibleswins[i];
+				//drawResult(2,possibleswins[i]);
 				return 2
 			}
 		}
@@ -143,11 +151,14 @@ class Tictactoe{
 	//decide which is the next play, draw it and update the board
 	nextPlay(){
 		//console.log(this.boardfield);
+		//alert("");
 		var pos = this.decideNextPlay();			
 		var xy = this.stringToIntArray(pos);
 
 		this.boardfield[xy[0]][xy[1]]=1;
-		updateField(1,pos,this.pcstart);
+		//updateField(1,pos,this.pcstart);
+		blockDivClicks();
+		setTimeout(updateField,3000,1,pos,this.pcstart);
 
 		var winner = this.checkwinner(this.boardfield);
 		if(winner)
@@ -251,6 +262,7 @@ class Tictactoe{
 
 	updateAfterWinner(user)	{
 		blockDivClicks();
+		drawResult(user,this.winningPlay);
 	}
 
 ////////////////////////////////////////////////////
@@ -262,6 +274,12 @@ function blockDivClicks(){
 	for(var i = 0; i < 3; i++)
 		for(var j = 0; j < 3; j++)
 			$('#' + i + j).prop('onclick',null).off('click');
+}
+
+function unblockDiv(){
+	for(var i = 0; i < 3; i++)
+		for(var j = 0; j < 3; j++)
+			$('#' + i + j).click(userPlay);
 }
 
 function drawInicialField(){
@@ -307,6 +325,7 @@ function drawInicialField(){
 
 
 function updateField(user, pos, pcstart){	
+
 	var images = [["\"images/alogo.png\"","alogo"],["\"images/clogo.png\"","clogo"]];
 	// console.log(images);
 	// console.log(images[0]);
@@ -342,13 +361,68 @@ function updateField(user, pos, pcstart){
 		$("#" + pos).addClass(class1);
 		// $("#" + pos).css()
 		// $("#" + pos).css("background","red");
+		
 	}
+	unblockDiv();
+	if(user == 1)
+		animateText("messages","Your turn",1);
+	else 
+		animateText("messages","My turn now",1);
 }
 // draw UI depending on the user who won, 0 for draw, 1 for PC and 2 for user
-function drawResult(user){
-	//draw a line if there is a winner
+function drawResult(user, winningLine){
+	//hide label for messages;
+	$("#messages").css("color","darkred");	
+
+	//start canvas
+ 	$("#game").append("<canvas id=\"drawing\"></canvas");
+ 	$("#drawing").addClass("draws");
+
+ 	//draw winning line.
+ 	var ctx = document.getElementById("drawing").getContext('2d');
+ 	ctx.beginPath();
+ 	var xdiv6 = 300/6;
+ 	var ydiv6 = 150/6; 
+ 	var x = parseInt(winningLine.substring(0,1))*xdiv6*2 + xdiv6;
+ 	var y = parseInt(winningLine.substring(1,2))*ydiv6*2 + ydiv6;
+ 	var xy1 = {x,y};
+ 	x = parseInt(winningLine.substring(2,3))*xdiv6*2+xdiv6;
+ 	y = parseInt(winningLine.substring(3,4))*ydiv6*2+ydiv6;
+ 	var xy2 = {x,y};
+ 	ctx.lineWidth = 2;
+ 	ctx.moveTo(xy1['x'], xy1['y']);
+ 	ctx.lineTo(xy2['x'], xy2['y']);	
+ 	//show a result message
+
+ 	ctx.stroke();
+ 	//go back to the main menu or show a new menu 
 }
 
 function drawlogo(user,pos,start){
 
+}
+
+
+//we are going to keep loading characters to de label
+//we are going to use the timer for it
+//frames are going to be the amount of characters
+//timer in seconds
+function animateText(label_name, text, timer){
+	//setTimeout(alert("4 seconds"),4000);
+	t = 0;
+	text = text;
+	var milisecondPerFrame = Math.ceil(timer * 1000 / text.length);
+	for (var i = 0; i < text.length; i++) {
+		$("#"+label_name).html(text.substring(0,i+1));
+		setTimeout(textFrame, i*milisecondPerFrame, text.substring(0, i + 1));
+	}
+
+}
+
+var t;
+var textToLabel;
+//function animate
+function textFrame(text)
+{
+	$("#messages").html(text);
 }

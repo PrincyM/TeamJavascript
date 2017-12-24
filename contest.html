@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>JS Comics</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="javascript/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="javascript/tictactoe.js"></script>
 	<script type="text/javascript" src="javascript/contest.js"></script>
 	 <link rel="stylesheet" type="text/css" href="style/contest.css">
@@ -16,13 +16,18 @@
 
 		<main id="main">
 			<!-- game section -->
-			<div id="game">
+			<div id="game" class="animated">
 				
-			</div>	
 	<!-- 		<canvas id="drawings">
 				
 			</canvas> -->
-			
+				
+			</div>
+			<div id="btn_reset">
+				<label id="messages" class="animated">.</label>
+				<button id="btn_pagain" onclick="loadTicTacToe()" disabled="true" >Play Again</button>
+				<button onclick="drawMenu()">Back to Menu</button>
+			</div>
 		</main>
 
 	    <object type="text/html" data="footer.html"></object>

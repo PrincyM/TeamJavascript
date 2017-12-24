@@ -13,6 +13,7 @@ function loadOptions(){
 
 function loadTicTacToe(){
 	$("#menu").remove();
+	$("#game").html("");
 	gameInstance = new Tictactoe(hard);
 	gameInstance.load(player);
 }
@@ -37,6 +38,7 @@ function drawMenu(){
 	$("#menu").append($("<input id=\"btn_start\" type=\"button\" value=\"start\"></input>").click(loadTicTacToe));
 	$("#btn_hard").addClass("pressed");
 	$("#btn_comm").addClass("pressed");
+	$("btn_pagain").css("disabled","true");
 }
 
 
