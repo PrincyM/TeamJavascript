@@ -13,6 +13,7 @@ class Tictactoe{
 
 	load(pcstart){
 		//show a welcome message
+		$("#messages").css("color", "black");
 		animateText("messages", "Welcome dear comrad!",2);
 
 		//create all the divs for the board
@@ -111,7 +112,6 @@ class Tictactoe{
 				console.log(possibleswins[i]);
 				console.log(boardtemp);
 				this.winningPlay = possibleswins[i];
-				//drawResult(2,possibleswins[i]);
 				return 2
 			}
 		}
@@ -262,7 +262,8 @@ class Tictactoe{
 
 	updateAfterWinner(user)	{
 		blockDivClicks();
-		drawResult(user,this.winningPlay);
+		//drawResult(user,this.winningPlay);
+		setTimeout(drawResult,4000,user,this.winningPlay);
 	}
 
 ////////////////////////////////////////////////////
@@ -375,7 +376,7 @@ function drawResult(user, winningLine){
 	$("#messages").css("color","darkred");	
 
 	//start canvas
- 	$("#game").append("<canvas id=\"drawing\"></canvas");
+ 	$("#game").append("<canvas id=\"drawing\"></canvas"); 	
  	$("#drawing").addClass("draws");
 
  	//draw winning line.
@@ -383,25 +384,34 @@ function drawResult(user, winningLine){
  	ctx.beginPath();
  	var xdiv6 = 300/6;
  	var ydiv6 = 150/6; 
- 	var x = parseInt(winningLine.substring(0,1))*xdiv6*2 + xdiv6;
- 	var y = parseInt(winningLine.substring(1,2))*ydiv6*2 + ydiv6;
+ 	var x = parseInt(winningLine.substring(1,2))*xdiv6*2 + xdiv6;
+ 	var y = parseInt(winningLine.substring(0,1))*ydiv6*2 + ydiv6;
  	var xy1 = {x,y};
- 	x = parseInt(winningLine.substring(2,3))*xdiv6*2+xdiv6;
- 	y = parseInt(winningLine.substring(3,4))*ydiv6*2+ydiv6;
+ 	x = parseInt(winningLine.substring(3,4))*xdiv6*2+xdiv6;
+ 	y = parseInt(winningLine.substring(2,3))*ydiv6*2+ydiv6;
  	var xy2 = {x,y};
  	ctx.lineWidth = 2;
  	ctx.moveTo(xy1['x'], xy1['y']);
- 	ctx.lineTo(xy2['x'], xy2['y']);	
+ 	ctx.lineTo(xy2['x'], xy2['y']);
  	//show a result message
 
  	ctx.stroke();
  	//go back to the main menu or show a new menu 
+ 	setTimeout(blurDivs, 1000);
+}
+
+function blurDivs()
+{
+	for (var i = 0; i < 3 ; i++) 
+		for (var j = 0; j < 3; j++)
+			$("#" + i + j ).addClass("blur");	
+	
 }
 
 function drawlogo(user,pos,start){
 
 }
-
+	
 
 //we are going to keep loading characters to de label
 //we are going to use the timer for it
@@ -412,7 +422,8 @@ function animateText(label_name, text, timer){
 	t = 0;
 	text = text;
 	var milisecondPerFrame = Math.ceil(timer * 1000 / text.length);
-	for (var i = 0; i < text.length; i++) {
+	for (var i = 0; i < text.length; i++) 
+	{
 		$("#"+label_name).html(text.substring(0,i+1));
 		setTimeout(textFrame, i*milisecondPerFrame, text.substring(0, i + 1));
 	}
