@@ -2,8 +2,9 @@
 #game{
 	height: 360px;
 	width: 640px;
-	border:2px solid yellow;
+	border:2px solid black;
 	margin:0 auto;
+	margin-top:1em;
 	position: relative;
 }
 #menu{

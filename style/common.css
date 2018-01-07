@@ -1,11 +1,15 @@
 html{
 	box-sizing: border-box;
 	font-family: 'Rajdhani', sans-serif;
+	height: 100%;
+}
+body{
+	margin:0;
 }
 *, *::before, *::after{
 	box-sizing: border-box;
 }
-object{
+/*object{
 	width: 100%;
 	height: 3em;
 	margin:0 auto;
@@ -13,9 +17,12 @@ object{
 	text-align: center;	
 	background-color: #cccc98;
 	height: 100%;
-}
+}*/
 nav{
 	text-align: center;
+}
+#header{
+	border-bottom: 5px solid #AC2430;
 }
 #main-menu a{
 	text-decoration: none;
@@ -23,8 +30,13 @@ nav{
 	font-weight: bold;
 	font-size: 1.5em;
 }
+#main-menu a:hover{
+	background-color: #594A42;
+	color: #cccc98;
+}
 #main-menu ul li{
 	display:inline-block;
+	margin-right: 10px;
 	color: #594A42;
 }
 #menu-container
@@ -36,5 +48,7 @@ nav{
 	max-width: 1024px;
 	margin:0 auto;
 	border:1px solid black;
-	background:#cccc98;
+	/*background:#cccc98;*/
+	background-image: url("../images/backdrops/watermark_1025px.png");
+
 }
