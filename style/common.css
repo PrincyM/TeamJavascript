@@ -1,5 +1,6 @@
 html{
 	box-sizing: border-box;
+	font-family: 'Rajdhani', sans-serif;
 }
 *, *::before, *::after{
 	box-sizing: border-box;
@@ -8,24 +9,32 @@ object{
 	width: 100%;
 	height: 3em;
 	margin:0 auto;
-	border-bottom: 2px solid black;
+	border-bottom: 5px solid #AC2430;
 	text-align: center;	
-	background-color: black;
+	background-color: #cccc98;
+	height: 100%;
 }
 nav{
 	text-align: center;
 }
-nav a{
+#main-menu a{
 	text-decoration: none;
-	color:yellow;
+	color:#594A42;
+	font-weight: bold;
+	font-size: 1.5em;
 }
 #main-menu ul li{
 	display:inline-block;
+	color: #594A42;
+}
+#menu-container
+{
+	margin-top:3em;	
 }
 #pagewrap
 {
 	max-width: 1024px;
 	margin:0 auto;
 	border:1px solid black;
-	background:darkred;
+	background:#cccc98;
 }
