@@ -82,7 +82,7 @@ nav{
 #main-menu li {
 	position:relative;
 }
-#mainlinks>li{
+#mainlinks>li>a{
 	padding:6px;
 }
 #main-menu ul ul{
@@ -97,7 +97,7 @@ nav{
 	color:#cccc98;
 }
 #main-menu ul li:hover ul{
-	left:0;
+	left:6px;
 	width:130;
 }
 #sublink1 {
@@ -121,5 +121,7 @@ nav{
 	margin:0 auto;
 	border:1px solid black;
 	/*background:#cccc98;*/
-	background-image: url("../images/backdrops/watermark_1025px.png");
+	background-image: url("../images/backdrops/watermark_1925px.png");
+	background-size: 100%;
+	background-attachment: fixed;
 }
