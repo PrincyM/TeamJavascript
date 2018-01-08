@@ -18,12 +18,30 @@ body{
 	box-sizing: border-box;
 }
 h1{
-	font-size: 2em;
-	font-family: 'Rajdhani', sans-serif;
+	font-size: 6em;
 	color: #594A42;
 	text-transform: uppercase;
+	display: inline-block;
+	margin:0;
 }
-
+#maintitle{
+	text-align: center;
+	display: flex;
+	flex-flow: row wrap;
+	width: 800px;
+	margin: 0 auto;
+}
+#mainlogo{
+	width: 100%;
+}
+#logo{
+	flex: 1 0 0;
+}
+#title{
+	margin-left: 2%;
+	margin-top:45px;
+	flex: 3 0 0;
+}
 
 /*object{
 	width: 100%;
@@ -39,8 +57,8 @@ nav{
 }
 #header{
 	border-bottom: 5px solid #AC2430;
-	height: 10em;
-	position: relative;
+	text-align: center;
+	/*position: relative;*/
 
 }
 #main-menu{
@@ -61,10 +79,39 @@ nav{
 	margin-right: 10px;
 	color: #594A42;
 }
+#main-menu li {
+	position:relative;
+}
+#mainlinks>li{
+	padding:6px;
+}
+#main-menu ul ul{
+	position:absolute;
+	background-color: #594A42;
+	left:-10000px;
+}
+#main-menu ul ul li{
+	display: block;
+}
+#main-menu ul ul a{
+	color:#cccc98;
+}
+#main-menu ul li:hover ul{
+	left:0;
+	width:130;
+}
+#sublink1 {
+	padding-left: 13px;
+}
+#sublink2{
+	padding-left:0;
+}
+
 #menu-container
 {
 	/*position: absolute;
-	/*bottom: 0px;*/
+	bottom: 0px;*/
+	width: 100%;
 	text-align: center;
 	vertical-align: bottom;
 }
@@ -75,5 +122,4 @@ nav{
 	border:1px solid black;
 	/*background:#cccc98;*/
 	background-image: url("../images/backdrops/watermark_1025px.png");
-
 }
