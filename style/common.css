@@ -1,3 +1,11 @@
+/***************************
+* TABLE OF CONTENTS
+*
+*=========================
+*1. DEFAULT OVERRIDES
+*2. HEADER
+***************************/
+
 html{
 	box-sizing: border-box;
 	font-family: 'Rajdhani', sans-serif;
@@ -9,6 +17,14 @@ body{
 *, *::before, *::after{
 	box-sizing: border-box;
 }
+h1{
+	font-size: 2em;
+	font-family: 'Rajdhani', sans-serif;
+	color: #594A42;
+	text-transform: uppercase;
+}
+
+
 /*object{
 	width: 100%;
 	height: 3em;
