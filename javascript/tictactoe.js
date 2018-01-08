@@ -14,7 +14,7 @@ class Tictactoe{
 	load(pcstart){
 		//show a welcome message
 		$("#messages").css("color", "black");
-		animateText("messages", "Welcome dear comrad!",2);
+		animateText("messages", "Welcome dear comrade!",2);
 
 		//create all the divs for the board
 		this.boardfield = [[0,0,0],[0,0,0],[0,0,0]];

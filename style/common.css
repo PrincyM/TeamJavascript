@@ -28,7 +28,7 @@ h1{
 	text-align: center;
 	display: flex;
 	flex-flow: row wrap;
-	width: 800px;
+	width: 900px;
 	margin: 0 auto;
 }
 #mainlogo{
@@ -39,7 +39,7 @@ h1{
 }
 #title{
 	margin-left: 2%;
-	margin-top:45px;
+	margin-top:60px;
 	flex: 3 0 0;
 }
 
@@ -124,4 +124,7 @@ nav{
 	background-image: url("../images/backdrops/watermark_1925px.png");
 	background-size: 100%;
 	background-attachment: fixed;
+}
+#footer{
+	background-color: #594A42;
 }
