@@ -373,7 +373,7 @@ function updateField(user, pos, pcstart){
 // draw UI depending on the user who won, 0 for draw, 1 for PC and 2 for user
 function drawResult(user, winningLine){
 	//hide label for messages;
-	$("#messages").css("color","darkred");	
+	$("#messages").css("color","#FCF9CE");	
 
 	//start canvas
  	$("#game").append("<canvas id=\"drawing\"></canvas"); 	

@@ -39,7 +39,7 @@ function drawMenu(){
 	$("#btn_hard").addClass("pressed");
 	$("#btn_comm").addClass("pressed");
 	$("#btn_pagain").css("disabled","true");
-	$("#messages").css("color","#cccc98")
+	$("#messages").css("color","#FCF9CE");
 }
 
 
