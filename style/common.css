@@ -128,3 +128,23 @@ nav{
 #footer{
 	background-color: #594A42;
 }
+#footer-nav{
+	display: flex;
+	flex-flow: row wrap;
+	width: 400px;
+	margin:0 auto;
+	font-size: 1.2em;
+}
+#footer-nav a{
+	text-decoration: none;
+	color:#fcF9ce;
+}
+.sidefooter{
+	flex:1 0 0;
+}
+.sidefooter ul{
+	list-style: none;
+}
+.sidefooter li{
+	margin-bottom: 5px;
+}
