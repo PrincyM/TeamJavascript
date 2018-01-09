@@ -148,3 +148,15 @@ nav{
 .sidefooter li{
 	margin-bottom: 5px;
 }
+#social{
+	display: flex;
+	flex-wrap: row wrap;
+	width: 300px;
+	margin:0 auto;
+}
+#social div{
+	flex:1 0 0;
+}
+#social img{
+	height: 40px;
+}
