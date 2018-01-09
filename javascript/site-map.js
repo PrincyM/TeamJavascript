@@ -15,7 +15,7 @@
 var mainSections = ["Products/Services","Location","Site Map","Constest","About Us"];
 var secSections = [["Menu", "Specials", "Gift Cards","Events/Booking"],[]
 	,[] ,[] ,["Contact Us", "Carreers"]];
-var mainSectionsLinks = ["Products/Services","Location","Site Map","Constest","About Us"];
+var mainSectionsLinks = ["Products/Services","Location","site-map.html","contest.html","About Us"];
 var secSectionsLinks = [["Menu", "Specials", "Gift Cards","Events/Booking"],[]
 	,[] ,[] ,["Contact Us", "Carreers"]];
 
@@ -28,6 +28,7 @@ window.onload = function(){
 	canvas.width = 800;
 	canvas.height = 500;
 	drawLayout();
+	$("#preview").hide();
 }
 
 
@@ -57,7 +58,7 @@ function drawLayout(){
 	for(var i = 0; i< mainSections.length; i++)
 	{
 		draw(i*(hmargin)-boxWidth+hmargin,margin*2+boxHeigth,
-			boxWidth,boxHeigth,mainSections[i],mainSectionsLinks[i][j]);
+			boxWidth,boxHeigth,mainSections[i],mainSectionsLinks[i]);
 	}
 
 //finaly we do the same thing for the secondary sections
@@ -87,26 +88,30 @@ function draw(x,y,a,b,text,link){
 	// ctx.fillStyle="#FFF";
 	// ctx.fillText(text,10,50);
 	var newBox = document.createElement("div");
-	newBox.style.background = "#777";
+	newBox.className += "sitediv";
+	// newBox.style.background = "#777";
 	newBox.style.width = a + "px";
 	newBox.style.height = b + "px";
-	newBox.style.position = "relative";
+	// newBox.style.position = "relative";
 	newBox.style.top = y+"px";
 	newBox.style.left = Math.floor(x)+"px";
-	newBox.style.display = "inline-block";
-	newBox.style.color = "white";
+	// newBox.style.display = "inline-block";
+	// newBox.style.color = "white";
 	newBox.innerHTML = text;
-	newBox.style.textAlign = "center";
-	newBox.style.verticalAlign = "middle";
+	// newBox.style.textAlign = "center";
+	// newBox.style.verticalAlign = "middle";
 	newBox.style.lineHeight = b + "px";
-	newBox.addEventListener("click", function(){onSiteDivMouseOver("http://www.emol.com")});
+	console.log(text+":"+link);
+	newBox.addEventListener("click", function(){onSiteDivMouseOver(link)});
 //	newBox.addEventListener("mouseout", onSiteDivMouseOut(link));
 	canvas.appendChild(newBox);
 }
 
 function onSiteDivMouseOver (link){
 	var scale = .4;
-	$("#preview").html = "";	
+	$("#preview").html = "";
+	$("#preview").slideDown("1000");
+	$("#map-layout").slideUp("1000");
     //document.getElementById("preview").innerHTML = "";
 	var ifrm = document.createElement("iframe");
 	ifrm.id = "ifrm-site";
@@ -122,8 +127,12 @@ function onSiteDivMouseOver (link){
     ifrm.style.outline = "1px solid transparent";
     //$("#ifrm-site").hide();
     //$("#ifrm-site").slideToggle(10000);
-	console.log(ifrm.children);
-
+	var div = document.createElement("div");
+	div.id = "overlay";
+	div.className ="overlaydiv";
+	div.addEventListener('click',function(){clickpreview(link)});
+	document.getElementById("preview").appendChild(div);
+	
 
 
 	// var prev = document.createElement("object");
@@ -140,4 +149,13 @@ function onSiteDivMouseOver (link){
 	//$("#siteloader").html('<object id="new-page" data="http://emol.com/"></object>');
 	//$("#new-page").css("width","1080px")
 	//$("#new-page").css("height","1600");	
+}
+function sitemapclick(){
+	$("#map-layout").slideToggle(1000);
+}
+function previewtitleclick(){
+	$("#preview").slideToggle(1000);
+}
+function clickpreview(link){
+	window.location.href = link;
 }
