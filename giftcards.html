@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>Gift Cards</title>
+	<link rel="stylesheet" type="text/css" href="style/common.css">
+	<link rel="stylesheet" type="text/css" href="style/giftcard.css">
+	<script type="text/javascript" src="javascript/giftcard.js"></script>
+</head>
+<body>
+<div id="pagewrap">
+<header id="header">
+			<div id="maintitle">
+				<div id="title">
+					<h1>Comrade Cafe</h1>
+				</div>
+				<div id="logo">
+					<img id="mainlogo" src="images/icon.png" alt="Comrad Cafe logo">
+				</div>
+			</div>
+			<div id="menu-container">
+				<nav id="main-menu">
+					<ul id="mainlinks">
+						<li>
+							<a href="#">Product/Services</a>
+							<ul id="sublink1">
+								<li>
+									<a href="#">Menu</a>
+								</li>
+								<li>
+									<a href="#">Specials</a>
+								</li>
+								<li>
+									<a href="#">Gift Cards</a>
+								</li>
+								<li>
+									<a href="#">Event/Booking</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Location</a>
+						</li>
+						<li>
+							<a href="site-map.html">Site-Map</a>
+						</li>
+						<li>
+							<a href="#">About Us</a>
+							<ul id="sublink2">
+								<li>
+									<a href="#">Menu</a>
+								</li>
+								<li>
+									<a href="#">Specials</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="contest.html">Contest</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+<main>
+	<h2 id="gcHeader">Gift Card</h2>
+<div id="giftcard">
+	<p class="gc_labels" id=fname_label>First Name Goes Here</p>
+	<p class="gc_labels" id="lname_label"></p>
+	<p class="gc_labels" id="message_label"></p>
+
+<!-- star image -->
+
+	<img class="pic_side" id="copper_star" src="images/giftcard/copper_star.png" alt="copper triangles of stars">
+	<img class="pic_side" id="green_star" src="images/giftcard/green_star.png" alt="green triangles of star">
+	<img class="pic_side" id="red_star" src="images/giftcard/red_star.png" alt="red triangles of star">
+</div> <!-- end of giftcard div -->
+
+
+	<form id="giftcard_form" action="giftcard" method="post">
+	
+		<div>
+			<label for="fname">First Name:</label>
+			<input type="text" name="fname">
+		</div>
+		<div>
+			<label for="lname">Last Name:</label>
+			<input type="text" name="lname">
+		</div>
+		<div>
+			<label for="message">Message:</label>
+			<textarea id="messagetxtbox" name="message" placeholder="Please type your message here"></textarea>
+		</div>
+		<div>
+			<label for="backgroundcolours">Background Colour:</label>
+			<button class="backgroundcolours" type="submit" name="background_colour1"></button>
+			<button class="backgroundcolours" type="submit" name="background_colour2"></button>
+			<button class="backgroundcolours" type="submit" name="background_colour3"></button>
+		</div>
+		<div>
+			<label for="fontcolour">Font Colour:</label>
+			<button class="fontcolours" type="submit" name="font_colour1"></button>
+			<button class="fontcolours" type="submit" name="font_colour2"></button>
+			<button class="fontcolours" type="submit" name="font_colour3"></button>
+		</div>
+		<div>
+			<label for="starcolour">Star Colour:</label>
+			<button class="starcolours" type="submit" name="star_colour1"></button>
+			<button class="starcolours" type="submit" name="star_colour2"></button>
+			<button class="starcolours" type="submit" name="star_colour3"></button>
+		</div>
+		<div>
+			<label for="marxcolour">Marx Colour:</label>
+			<button class="marxcolours" type="submit" name="marx_colour1"></button>
+			<button class="marxcolours" type="submit" name="marx_colour2"></button>
+			<button class="marxcolours" type="submit" name="marx_colour3"></button>
+		</div>
+	</form>
+	</main>
+
+	</div>
+
+<footer id="footer">
+			<div id="footer-nav">
+				<div id="left" class="sidefooter">
+					<ul>
+						<li>
+							<a href="#">Menu</a>
+						</li>
+						<li>
+							<a href="#">Specials</a>
+						</li>
+						<li>
+							<a href="#">Gift Card</a>
+						</li>
+						<li>
+							<a href="#">Events/Booking</a>
+						</li>
+						<li>
+							<a href="#">Location</a>
+						</li>
+					</ul>
+				</div>
+				<div id="right" class="sidefooter">
+					<ul>
+						<li>
+							<a href="#">Site Map</a>
+						</li>
+						<li>
+							<a href="#">Contest</a>
+						</li>
+						<li>
+							<a href="#">About Us</a>
+						</li>
+						<li>
+							<a href="#">Contact Us</a>
+						</li>
+						<li>
+							<a href="#">Careers</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="social">
+				<div>
+					<a href=""><img src="images/fb.png" alt=""></a>
+				</div>
+				<div>
+					<a href=""><img src="images/inst.png" alt=""></a>
+				</div>
+				<div>
+					<a href=""><img src="images/tw.png" alt=""></a>
+				</div>
+				<div>
+					<a href=""><img src="images/ut.png" alt=""></a>
+				</div>
+			</div>
+			<p>
+				Comrade Cafe © 2018. All rights reserved.
+			</p>
+		</footer>
+
+
+
+	
+
+</body>
+</html>

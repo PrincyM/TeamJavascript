@@ -1,0 +1,35 @@
+
+/* 
+------------------------
+GIFTCARD
+------------------------
+*/
+
+
+#giftcard{
+	border:6px solid #AC2430;
+	border-radius: 1em;
+	width: 45%;
+	min-height: 24em;
+	background-color: white;
+	display:flex;
+	margin-left: 28%;
+}
+.gc_labels{
+	width: 50%;
+}
+.pic_side{
+	width: 50%;
+}
+#gcHeader{
+	text-align: center;
+	color: #594A42;
+}
+.pic_side{
+	max-height: 12em;
+	margin-top: 15%;
+	margin-right: 5%;
+}
+
+
+
