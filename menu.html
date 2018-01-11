@@ -5,12 +5,9 @@
 	<link rel="shortcut icon" href="images/icon.ico" />
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani:700" rel="stylesheet">
 	<script src="javascript/jquery-3.2.1.min.js"></script>
-  <title>Comrade Cafe</title>
-	<link rel="shortcut icon" href="images/icon.ico" />
-	<link href="https://fonts.googleapis.com/css?family=Rajdhani:700" rel="stylesheet">
-	<script src="javascript/jquery-3.2.1.min.js"></script>
-	  <link rel="stylesheet" type="text/css" href="style/common.css">
-    <link rel="stylesheet" type="text/css" href="style/menu.css">
+  <script src="javascript/menu.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/common.css">
+  <link rel="stylesheet" type="text/css" href="style/menu.css">
 </head>
 
 <body>
@@ -74,19 +71,22 @@
     <h2 id="menu-title">Our Menu</h2>
     <p id="menu-description">The Comrade Cafe's menu is a continually evolving repertoire;
     some classics, some reworking of old favourites and new dishes for each season</p>
-    <section class="menu-section-one">
+    <div id="four-sections">
+    <section class="menu-section">
       <div class="image-container">
-        <img id="appetizers_img" src="images/appetizers.jpg" alt="Appetizers Menu" />
-        <h3 class="menu-heading">Appetizers</h3>
-        <p class="menu-details">
-           Caviar for Comrads - $9.99
-           Builder’s Russian Black Brea - $10.99
-           Pickles and Sprats - $7.99
-           Hard boiled eggs and Herring Heads - $8.99
-        </p>
-      </div>
+        <img id="menu_img" src="images/menu/appetizers.jpg" alt="Appetizers Menu" />
+           <h3 class="menu-heading">Appetizers</h3>
+           <p class="menu-details">
+              Caviar for Comrads - $9.99
+              Builder’s Russian Black Brea - $10.99
+              Pickles and Sprats - $7.99
+              Hard boiled eggs and Herring Heads - $8.99
+           </p>
+    </div>
+
+
       <div class="image-container">
-        <img id="lunch_img" src="images/lunch.jpg" alt="Lunch Menu" />
+        <img id="menu_img" src="images/menu/lunch.jpg" alt="Lunch Menu" />
         <h3 class="menu-heading">Lunch</h3>
         <p class="menu-details">
           Brother’s Borscht - $15.99
@@ -96,9 +96,9 @@
         </p>
       </div>
     </section>
-    <section class="menu-section-two">
+    <section class="menu-section">
       <div class="image-container">
-        <img id="dinner_img" src="images/dinner.png" alt="Dinner Menu" />
+        <img id="menu_img" src="images/menu/dinner.png" alt="Dinner Menu" />
         <h3 class="menu-heading">Dinner</h3>
         <p class="menu-details">
           Stroganoff for Soviets - $20.99
@@ -111,7 +111,7 @@
         </p>
       </div>
       <div class="image-container">
-        <img id="desserts_img" src="images/desserts.jpg" alt="Desserts Menu" />
+        <img id="menu_img" src="images/menu/desserts.jpg" alt="Desserts Menu" />
         <h3 class="menu-heading">Desserts</h3>
         <p class="menu-details">
           Rosa's butter cookies - $15.99
@@ -120,9 +120,23 @@
         </p>
       </div>
       </section>
+    </div>
+      <div id="comrade-specials-div">
+        <img id="menu_img" src="images/menu/specials.png" alt="Comrade Special Menu" />
+        <h3 class="menu-heading">Comrade Specials</h3>
+        <p class="menu-details">
+          Stroganoff for Soviets - $20.99
+          Golubsty - $22.99
+          Kasha - $15.49
+          Pelmeni - $16.99
+          Pirog - $13.49
+          Plov - $19.99
+          Goulash - $18.99
+        </p>
+      </div>
   </main>
 <!-- footer --->
-<footer>
+<footer id="footer">
   <div id="footer-nav">
     <div id="left" class="sidefooter">
       <ul>
@@ -181,7 +195,7 @@
     Comrade Cafe © 2018. All rights reserved.
   </p>
 </footer>
-</div>
+  </div>
 </body>
 </html>
 
