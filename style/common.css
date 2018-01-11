@@ -124,11 +124,22 @@ nav{
 	background-image: url("../images/backdrops/watermark_1925px.png");
 	background-size: 100%;
 	background-attachment: fixed;
+	margin-bottom: 250px;
+	z-index:10;
+}
+main{
+	margin-left: 10%;
+	margin-right: 10%;
 }
 #footer{
 	background-color: #594A42;
 	border-top: 5px solid #AC2430;
 	margin-top:2em;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 11;
 }
 #footer-nav{
 	display: flex;
@@ -168,3 +179,4 @@ nav{
 	text-align: right;
 	color: #cccc98;
 }
+
