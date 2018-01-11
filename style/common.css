@@ -125,21 +125,26 @@ nav{
 	background-size: 100%;
 	background-attachment: fixed;
 	margin-bottom: 250px;
+	position: relative;
 	z-index:10;
+	border-bottom: 5px solid #AC2430;
+	padding-bottom: 30px;
+	
 }
 main{
 	margin-left: 10%;
 	margin-right: 10%;
+	position: relative;
+
 }
 #footer{
 	background-color: #594A42;
-	border-top: 5px solid #AC2430;
 	margin-top:2em;
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	z-index: 11;
+	z-index:1;
 }
 #footer-nav{
 	display: flex;
