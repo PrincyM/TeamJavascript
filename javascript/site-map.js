@@ -109,14 +109,13 @@ function draw(x,y,a,b,text,link){
 
 function onSiteDivMouseOver (link){
 	var scale = .4;
-	$("#preview").html = "";
+	$("#preview").empty();
 	$("#preview").slideDown("1000");
 	$("#map-layout").slideUp("1000");
     //document.getElementById("preview").innerHTML = "";
 	var ifrm = document.createElement("iframe");
 	ifrm.id = "ifrm-site";
 	document.getElementById("preview").appendChild(ifrm);
-	
     ifrm.style.webkitTransform = "Scale("+ scale +")";
     ifrm.style.transformOrigin = "0 0";
 	//the next line, we have to change the secon argument for the actual link received. 
