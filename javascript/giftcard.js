@@ -4,16 +4,17 @@ $(document).ready(function(){
 
 //hide the stars
 
+	$("#original_logo").hide();
 	$("#copper_star").hide();
 	$("#green_star").hide();     
-	$("#red_star").hide();
+	$("#red_star").show();
+	$("#thank_you_message").hide();
 
 //hide the marx
 
 	$("#olive_marx").hide();
-	$("#periwinkle_marx").hide();     
+	$("#periwinkle_marx").show();     
 	$("#purple_marx").hide();
-
 
 //functions to take user input from form
 
@@ -21,7 +22,6 @@ $(document).ready(function(){
 	$("#to_giftee").on('input',onToNameChange);
 	$("#input_amount").on('input',onAmountChange);
 	$("#messagetxtbox").on('input',onMessageChange);
-	
 
 function onFnameChange(){
 	var a = $("#fname").val();
@@ -34,14 +34,13 @@ function onToNameChange(){
 }
 function onAmountChange(){
 	var a = $("#input_amount").val();
-	$("gift_amount").text("$");
-	$("#gift_amount").html(a);
+	
+	$("#gift_amount").html("$" + a);
 }
 function onMessageChange(){
 	var a = $("#messagetxtbox").val();
 	$("#gift_message").html(a);
 }
-
 
 // functions to change background color
 
@@ -105,18 +104,25 @@ function onMessageChange(){
 	$("#btn_submit").click(function(){
 		$("#giftcard_form").hide();
 		$("#txtbox_message").hide();
+		$("#thank_you_message").show();
 	});
 	
 	$("#btn_reset").click(function(){
 		$("#giftcard").css("background-color", "white");
-		$("#original_logo").show();
-		$("#red_star").hide();
+		$("#original_logo").hide();
+		$("#red_star").show();
 		$("#green_star").hide();
 		$("#copper_star").hide();
 		$("#olive_marx").hide();
 		$("#purple_marx").hide();
-		$("#periwinkle_marx").hide();
+		$("#periwinkle_marx").show();
+		$("#giftcard_form").show();
+		$("#txtbox_message").show();
+		$("#thank_you_message").hide();
 	});
+
+//thank you message
+
 
 
 

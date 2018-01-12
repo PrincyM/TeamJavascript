@@ -18,15 +18,17 @@ GIFTCARD
 .pic_side{
 	max-height: 12em;
 	margin-top: 15%;
-	margin-right: 3%;
+	margin-right: 12%;
 	float: right;
 	z-index: auto;
 }
 
 .marxcolours{
-	max-height: 6em;
-	margin-top: 95%;
+	max-height: 4em;
 	z-index: 1;
+	position: absolute;
+	top:39%;
+	left:31%;
 }
 
 #gcHeader{
@@ -36,6 +38,7 @@ GIFTCARD
 }
 .sidecontainer{
 	flex:1 0 0;
+	position: relative;
 }
 
 /*----WRITING IN CARD*/
@@ -47,7 +50,6 @@ GIFTCARD
 	padding-left: 0.5em;
 	margin-top: -25px;
 }
-
 
 
 /*----------------------
@@ -147,6 +149,13 @@ label {
 .btn_bottom:hover{
 	cursor: pointer;
 	background-color:#CCCC98;
+}
+
+/*THANK YOU MESSAGE*/
+
+#thank_you_message{
+	color: #594A42;
+	margin-left: 11%;
 }
 
 
