@@ -63,10 +63,9 @@ nav{
 	border-bottom: 5px solid #AC2430;
 	text-align: center;
 	/*position: relative;*/
-
 }
 #main-menu{
-
+	z-index: -1;
 }
 #main-menu a{
 	text-decoration: none;
@@ -102,13 +101,16 @@ nav{
 }
 #main-menu ul li:hover ul{
 	left:6px;
-	width:130;
 }
 #sublink1 {
 	padding-left: 13px;
+	z-index: 1000;
 }
 #sublink2{
 	padding-left:0;
+	width: 130px;
+	text-align: center;
+	z-index: 1000;
 }
 
 #menu-container
