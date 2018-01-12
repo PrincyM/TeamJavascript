@@ -9,8 +9,8 @@
 	<script type="text/javascript" src="javascript/giftcard.js"></script>
 </head>
 <body>
-<div id="pagewrap">
-<header id="header">
+	<div id="pagewrap">
+		<header id="header">
 			<div id="maintitle">
 				<div id="title">
 					<h1>Comrade Cafe</h1>
@@ -64,63 +64,85 @@
 			</div>
 		</header>
 
-<main>
-	<h2 id="gcHeader">Gift Card</h2>
-<div id="giftcard">
-	<p class="gc_labels" id=fname_label>First Name Goes Here</p>
-	<p class="gc_labels" id="lname_label"></p>
-	<p class="gc_labels" id="message_label"></p>
+		<main>
+			<h2 id="gcHeader">Gift Card</h2>
+			
+			<div id="giftcard">
+				
+				<div class="sidecontainer"> <!-- from -->
+					<div> <!-- div of gc labels -->
+						<h2 id="from">FROM:</h2>
+						<p class="gc_labels" id="from_name">your name goes here</p>
+					</div>	
+					<div>
+						<h2 id="to">TO:</h2>
+						<p class="gc_labels" id="to_name">the giftee's name goes here</p>
+					</div>
+					<div>
+						<h2 id="amount">AMOUNT:</h2>
+						<p class="gc_labels" id="gift_amount">the amount goes here</p>
+					</div>
+				</div> <!-- end of giftcard wrapper -->
 
-<!-- star image -->
-
-	<img class="pic_side" id="copper_star" src="images/giftcard/copper_star.png" alt="copper triangles of stars">
-	<img class="pic_side" id="green_star" src="images/giftcard/green_star.png" alt="green triangles of star">
-	<img class="pic_side" id="red_star" src="images/giftcard/red_star.png" alt="red triangles of star">
-</div> <!-- end of giftcard div -->
-
-
+				<!-- star image -->
+				<div class="sidecontainer">
+					<img class="pic_side" id="original_logo" src="images/icon.png">
+					<img class="pic_side" id="copper_star" src="images/giftcard/copper_star.png" alt="copper triangles of stars">
+					<img class="pic_side" id="green_star" src="images/giftcard/green_star.png" alt="green triangles of star">
+					<img class="pic_side" id="red_star" src="images/giftcard/red_star.png" alt="red triangles of star">
+				</div>
+			</div> <!-- end of giftcard div -->
 	<form id="giftcard_form" action="giftcard" method="post">
-	
-		<div>
-			<label for="fname">First Name:</label>
-			<input type="text" name="fname">
+		<div class="form_sidebar">
+			<div>
+				<label for="fname" class="form_font">From:</label>
+				<input id="fname" type="text" name="fname">
+			</div>
+			<div>
+				<label for="to" class="form_font">To:</label>
+				<input id="to_giftee" type="text" name="to_name">
+			</div>
+			<div>
+				<label for="amount" class="form_font">Amount:</label>
+				<input type="text" name="amount">
+			</div>
+			<div>
+				<label for="message" class="form_font">Message:</label>
+				<textarea id="messagetxtbox" name="message" placeholder="Please type your message here"></textarea>
+			</div>
 		</div>
-		<div>
-			<label for="lname">Last Name:</label>
-			<input type="text" name="lname">
-		</div>
-		<div>
-			<label for="message">Message:</label>
-			<textarea id="messagetxtbox" name="message" placeholder="Please type your message here"></textarea>
-		</div>
-		<div>
-			<label for="backgroundcolours">Background Colour:</label>
-			<button class="backgroundcolours" type="submit" name="background_colour1"></button>
-			<button class="backgroundcolours" type="submit" name="background_colour2"></button>
-			<button class="backgroundcolours" type="submit" name="background_colour3"></button>
-		</div>
-		<div>
-			<label for="fontcolour">Font Colour:</label>
-			<button class="fontcolours" type="submit" name="font_colour1"></button>
-			<button class="fontcolours" type="submit" name="font_colour2"></button>
-			<button class="fontcolours" type="submit" name="font_colour3"></button>
-		</div>
-		<div>
-			<label for="starcolour">Star Colour:</label>
-			<button class="starcolours" type="submit" name="star_colour1"></button>
-			<button class="starcolours" type="submit" name="star_colour2"></button>
-			<button class="starcolours" type="submit" name="star_colour3"></button>
-		</div>
-		<div>
-			<label for="marxcolour">Marx Colour:</label>
-			<button class="marxcolours" type="submit" name="marx_colour1"></button>
-			<button class="marxcolours" type="submit" name="marx_colour2"></button>
-			<button class="marxcolours" type="submit" name="marx_colour3"></button>
+
+
+		<div class="form_sidebar" id="second_sidebar">
+			<div>
+				<label for="backgroundcolours">Background Colour:</label>
+				<input type="button" id="btn_bg_grey" class="backgroundcolours" name="background_colour1"/>
+				<input type="button" id="btn_bg_green" class="backgroundcolours"  name="background_colour2"/>
+				<input type="button" id="btn_bg_red" class="backgroundcolours" name="background_colour3"/>
+			</div>
+			<div>
+				<label for="fontcolour">Font Colour:</label>
+				<input type="button" class="fontcolours"  name="font_colour1"/>
+				<input type="button" class="fontcolours" name="font_colour2"/>
+				<input type="button" class="fontcolours"  name="font_colour3"/>
+			</div>
+			<div>
+				<label for="starcolour">Star Colour:</label>
+				<input type="button" id="star_copper" class="starcolours" name="star_colour1"/>
+				<input type="button" id="star_green" class="starcolours"  name="star_colour2"/>
+				<input type="button" id="star_red" class="starcolours" name="star_colour3"/>
+			</div>
+			<div>
+				<label for="marxcolour">Marx Colour:</label>
+				<input type="button" class="marxcolours"  name="marx_colour1"/>
+				<input type="button" class="marxcolours"  name="marx_colour2"/>
+				<input type="button" class="marxcolours" name="marx_colour3"/>
+			</div>
 		</div>
 	</form>
 	</main>
 
-	</div>
+	</div> <!-- end of page wrapper div -->
 
 <footer id="footer">
 			<div id="footer-nav">
@@ -181,10 +203,5 @@
 				Comrade Cafe © 2018. All rights reserved.
 			</p>
 		</footer>
-
-
-
-	
-
 </body>
 </html>

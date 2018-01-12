@@ -10,26 +10,75 @@ GIFTCARD
 	border:6px solid #AC2430;
 	border-radius: 1em;
 	width: 45%;
-	min-height: 24em;
+	min-height: 18em;
 	background-color: white;
 	display:flex;
 	margin-left: 28%;
 }
-.gc_labels{
-	width: 50%;
-}
 .pic_side{
-	width: 50%;
+	max-height: 12em;
+	margin-top: 15%;
+	margin-right: 3%;
 }
 #gcHeader{
 	text-align: center;
 	color: #594A42;
+	font-size: 2em;
 }
-.pic_side{
-	max-height: 12em;
-	margin-top: 15%;
-	margin-right: 5%;
+.sidecontainer{
+	flex:1 0 0;
 }
+
+/*----WRITING IN CARD*/
+
+#from, #to, #amount{
+	padding-left: 0.5em;
+}
+#from_name, #to_name, #gift_amount {
+	padding-left: 0.5em;
+	margin-top: -20px;
+}
+
+/*----------------------
+FORM STYLING
+----------------------*/
+
+/*---LEFT SIDEBAR*/
+
+
+
+#giftcard_form{
+	display: flex;
+	margin-left: 22%;
+	margin-top: 8%;
+}
+#form_sidebar{
+	flex:1 0 0;
+}
+label {
+	font-size: 2em;
+	color: #594A42;
+}
+#second_sidebar{
+	margin-left: 4%;
+}
+#messagetxtbox{
+	min-height: 8em;
+	margin-top: 1.5em;
+}
+
+/*-----BUTTONS*/
+
+#btn_bg_grey{
+	background-color: #bcbaba;
+}
+#btn_bg_green{
+	background-color: #CCCC98;
+}
+#btn_bg_red{
+	background-color: #ac2430;
+}
+
 
 
 
