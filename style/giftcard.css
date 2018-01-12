@@ -19,7 +19,16 @@ GIFTCARD
 	max-height: 12em;
 	margin-top: 15%;
 	margin-right: 3%;
+	float: right;
+	z-index: auto;
 }
+
+.marxcolours{
+	max-height: 6em;
+	margin-top: 95%;
+	z-index: 1;
+}
+
 #gcHeader{
 	text-align: center;
 	color: #594A42;
@@ -31,13 +40,15 @@ GIFTCARD
 
 /*----WRITING IN CARD*/
 
-#from, #to, #amount{
+#from, #to, #amount, #message{
 	padding-left: 0.5em;
 }
-#from_name, #to_name, #gift_amount {
+#from_name, #to_name, #gift_amount, #gift_message{
 	padding-left: 0.5em;
-	margin-top: -20px;
+	margin-top: -25px;
 }
+
+
 
 /*----------------------
 FORM STYLING
@@ -50,7 +61,7 @@ FORM STYLING
 #giftcard_form{
 	display: flex;
 	margin-left: 22%;
-	margin-top: 8%;
+	margin-top: 5%;
 }
 #form_sidebar{
 	flex:1 0 0;
@@ -63,11 +74,29 @@ label {
 	margin-left: 4%;
 }
 #messagetxtbox{
-	min-height: 8em;
+	min-height: 12em;
+	min-width: 20em;
 	margin-top: 1.5em;
+}
+#txtbox_message{
+	padding-left: 40%;
+	padding-top: 3%;
+}
+#fname{
+	min-width: 17em;
+	min-height: 2.25em;
+}
+#to_giftee{
+	min-width: 20.5em;
+	min-height: 2.25em;
+}
+#input_amount{
+	min-width: 14em;
+	min-height: 2.25em;
 }
 
 /*-----BUTTONS*/
+/*background*/
 
 #btn_bg_grey{
 	background-color: #bcbaba;
@@ -78,6 +107,26 @@ label {
 #btn_bg_red{
 	background-color: #ac2430;
 }
+/*star*/
+#star_copper{
+	background-color: #c95805;
+}
+#star_green{
+	background-color: #0b8726;
+}
+#star_red{
+	background-color: #ed0a26;
+}
+#btn_olive_marx{
+	background-color: #3f3f2b;
+}
+#btn_purple_marx{
+	background-color: #620d99;
+}
+#btn_periwinle_marx{
+	background-color: #46407f;
+}
+
 
 
 

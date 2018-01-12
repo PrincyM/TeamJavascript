@@ -8,15 +8,42 @@ $(document).ready(function(){
 	$("#green_star").hide();     
 	$("#red_star").hide();
 
-//functions to take user input
+//hide the marx
+
+	$("#olive_marx").hide();
+	$("#periwinkle_marx").hide();     
+	$("#purple_marx").hide();
+
+
+//functions to take user input from form
 
 	$("#fname").on('input',onFnameChange);
 	$("#to_giftee").on('input',onToNameChange);
+	$("#input_amount").on('input',onAmountChange);
+	$("#messagetxtbox").on('input',onMessageChange);
 	
 
+function onFnameChange(){
+	var a = $("#fname").val();
+	$("#from_name").html(a);
+}
+
+function onToNameChange(){
+	var a = $("#to_giftee").val();
+	$("#to_name").html(a);
+}
+function onAmountChange(){
+	var a = $("#input_amount").val();
+	$("gift_amount").text("$");
+	$("#gift_amount").html(a);
+}
+function onMessageChange(){
+	var a = $("#messagetxtbox").val();
+	$("#gift_message").html(a);
+}
 
 
-// functions change background color
+// functions to change background color
 
 	$("#btn_bg_grey").click(function(){$("#giftcard").css
 	("background-color", "#bcbaba"); } ); 
@@ -31,18 +58,50 @@ $(document).ready(function(){
 
 	$("#star_copper").click(function(){
 		$("#original_logo").hide();
+		$("#green_star").hide();
+		$("#red_star").hide();
 		$("#copper_star").show();
 	});
 
+	$("#star_green").click(function(){
+		$("#original_logo").hide();
+		$("#copper_star").hide();
+		$("#red_star").hide();
+		$("#green_star").show();
+	});
 
-})//end of ready of line 1
+	$("#star_red").click(function(){
+		$("#original_logo").hide();
+		$("#green_star").hide();
+		$("#copper_star").hide();
+		$("#red_star").show();
+	});
 
-function onFnameChange(){
-	var a = $("#fname").val();
-	$("#from_name").html(a);
-}
+//functions to change marx
 
-function onToNameChange(){
-	var a = $("#to_giftee").val();
-	$("#to_name").html(a);
-}
+	$("#btn_olive_marx").click(function(){
+		$("#original_logo").hide();
+		$("#purple_marx").hide();
+		$("#periwinkle_marx").hide();
+		$("#olive_marx").show();
+	});
+
+	$("#btn_purple_marx").click(function(){
+		$("#original_logo").hide();
+		$("#olive_marx").hide();
+		$("#periwinkle_marx").hide();
+		$("#purple_marx").show();
+	});
+
+	$("#btn_periwinle_marx").click(function(){
+		$("#original_logo").hide();
+		$("#olive_marx").hide();
+		$("#purple_marx").hide();
+		$("#periwinkle_marx").show();
+	});
+
+
+
+
+})//end of ready function starting at line 1
+
