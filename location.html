@@ -2,12 +2,12 @@
 <html>
 <head>
 	<title>Location</title>
-	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani:700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/common.css">
 	<link rel="stylesheet" type="text/css" href="style/location.css">
-	<script type="text/javascript" src="javascript/location.js"></script>
+
+	
+
 </head>
 <body>
 	<div id="pagewrap">
@@ -65,7 +65,24 @@
 			</div>
 		</header>
 		<main>
-			<h2 id="Location">Locations</h2>
+			<h2 id="header_location">Locations</h2>
+				<div id="scarberia-wrapper">
+					<div id="column_left_scarberia">
+						<h3>Scarberian Comrades</h3>
+					</div>
+					<div id="column_right_scarberia">
+						<img src="#" alt="fun times in our scarberia location">
+						
+					</div>
+				</div>
+
+
+<!-- MAP SECTION -->
+  <div id="map"></div>
+    
+
+<!-- END OF MAP SECTION -->
+
 			
 		</main>	
 	</div> <!-- end of page wrap div -->
@@ -130,4 +147,9 @@
 		</footer>
 
 </body>
+<script type="text/javascript" src="javascript/location.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUm4CECgqiPy89D9yQ3tKA90u_kDSp5f8&callback=initMap"
+    async defer></script>
 </html>
