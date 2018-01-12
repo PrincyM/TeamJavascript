@@ -1,18 +1,16 @@
 <!DOCTYPE HTML>
 
-
-
 <html lang="en">
 <head>
 	<link rel="shortcut icon" href="images/icon.ico" />
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani:700" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>	
 	
-	<link rel="stylesheet" type="text/css" href="style/careers.css">
+	<link rel="stylesheet" type="text/css" href="style/events.css">
 	<link rel="stylesheet" type="text/css" href="style/common.css">
 	<script src="javascript/careers.js"></script>
 	<title>Comrad Cafe</title>
-	<script type="text/javascript" src="javascript/site-map.js"></script>
+
 	<!-- <script type="text/javascript" src="header.js"></script> -->
 	<!-- <link rel="import" href="header.html"> -->
 </head>
@@ -74,63 +72,61 @@
 		<!-- <object data="header.html"></object> -->
 		<!-- <object data="header.html"></object> -->
 		<main id="main">
-			<h2 id="careerstitle">Careers</h2>
-				<article id="careers">
-					<section id="kitchen">
-					<img id="kitchenimg" src="images/careers/kitchen.jpg" alt="Comrad Cafe Kitchen Picture">
-					<ul style="padding-left:0px; margin-top:0px;">
-						<li class="hoverli">
-						<h2 class="h2menu" style="margin-bottom:0px;" >Kitchen</h2>
-							<ul class="menulist" style="padding-left:0px;">
-								<li id="linecook">Cook (Hiring)</li>
-								<li id="chef">Chef (Hiring)</li>
-								<li class="redd">Dishwasher</li> 
-							</ul>
-						</li>
-					</ul>
-					</section>
-			
-					<section id="floor">
-					<img id="floorimg" src="images/careers/floor.jpg" alt="Comrad Cafe Floor Picture">
-					<ul style="padding-left:0px; margin-top:0px;">
-						<li class="hoverli">
-						<h2 class="h2menu" style="margin-bottom:0px;">Floor</h2>
-							<ul class="menulist" style="padding-left:0px;">
-								<li id="server">Server (Hiring)</li>
-								<li class="redd">Busser</li>
-								<li class="redd">Host</li> 
-							</ul>
-						</li>
-					</ul>
-					</section>
-					
-					<section id="admin">
-					<img id="adminimg" src="images/careers/admin.jpg" alt="Comrad Cafe Kitchen">
-					<ul style="padding-left:0px; margin-top:0px;">
-						<li class="hoverli">
-							<h2 class="h2menu" style="margin-bottom:0px;">Management</h2>
-							<ul class="menulist" style="padding-left:0px;">
-								<li id="manager">Manager (Hiring)</li>
-								<li class="redd">Accountant</li>
-							</ul>
-						</li>
-					</ul>
-					</section>
-				
+			<h2 class="headerbox">Events</h2>
+			<article class="articleflex">
+			<h2 class="hide">Events</h2>
+			<div class="s1flex">
+			<img class="boximg" src="images/maskparty.jpg" alt="Picture of a Mask Party"></img>
+			</div>
+			<div class="s2flex">
+			<h2 class="h2box">Fridays:</h2>
+			<p>Experience the ultimate Marxist Masqeurade party! Join us at Comrad Cafe to rock out in the Soviet bloc, for a revolutionary techno dance party that none can match.</p>
+			<p id="tickets">Dinner Tickets: 15$</p>
+			<p id="shots">Shots of Stolichnaya on Special: 2$</p>
+			</div>
 			</article>
-				
-				<article id="careersdisplay">
-				<h2 id="h2requirements" style="text-decoration: underline;"><span id="title2"></span> Position Requirements</h2>
-				<span id="requirements"></span>
-				<h2 id="h2compensation" style="text-decoration: underline;">Compensation</h2>
-				<p id="compensation"></p>
-				
-				</article>
+			
 	
-
-				
-				
-				
+			<article class="articleflex">
+			<h2 class="hide">Bookings</h2>
+			<div class="s1flex">
+			<img class="boximg" src="images/calendar.jpg" alt="Picture of a Calendar"></img>
+			</div>
+			<div class="s2flex">
+			<h2 class="h2box">Booking with Us:</h2>
+			<p>Call us to inquire about owning the means of production for your private revolution. We recommend booking at least 4 weeks in advance. Use the form below to contact our booking department.</p>
+</div>
+			</article>
+			<section>
+	<div class="form-field">
+	
+		<form class="work-form" action="events.html" method="post">
+		<div>
+		
+	    <label for="name">Comrade's Name:</label>
+        <input type="text" id="name" name="username" placeholder="Your name"
+		  value="" />
+	  </div>
+	  <div>
+	    <label for="email">Comrade's Email:</label>
+        <input type="email" id="email" name="useremail" placeholder="john@example.com"
+		  value="" />
+	  </div>
+		<div>
+		<label for="date">Date of Revolution:</label>
+		<input type="date" id="date" name="date" max="2020-12-12" min="2018-01-01>
+		</div>
+	  <input type="hidden" id="hiddeninfo" name="hiddeninfo" value="This is hidden" />
+	  <div>
+		<label for="message">Details:</label>
+	  </div>
+      <div>
+	    <textarea id="message" name="message" placeholder="Test..."></textarea>
+	  </div>
+      <button type="submit" id="submit" name="submit">Submit</button>
+		</form>
+	</div>
+	</section>
 	
 			
 		</main>
