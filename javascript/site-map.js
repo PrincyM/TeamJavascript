@@ -40,7 +40,7 @@ window.onload = function(){
 function drawLayout(){
 
 	var canvasWidth = canvas.width;
-	var boxWidth = 120;
+	var boxWidth = 125;
 	var canvasHeight = canvas.height;
 	var boxHeigth = 40;
 	var margin = 30;
@@ -66,7 +66,7 @@ function drawLayout(){
 	{
 		for(var j = 0; j < secSections[i].length;j++)
 		{
-			draw(i*(hmargin)-boxWidth*j+hmargin+10,
+			draw(i*(hmargin)-boxWidth*j+hmargin,
 				margin*(3 + j)+boxHeigth*(j+1)/2,
 				boxWidth,boxHeigth,secSections[i][j],secSectionsLinks[i][j]);
 		}
@@ -102,17 +102,18 @@ function draw(x,y,a,b,text,link){
 	// newBox.style.verticalAlign = "middle";
 	newBox.style.lineHeight = b + "px";
 	console.log(text+":"+link);
-	newBox.addEventListener("click", function(){onSiteDivMouseOver(link)});
+	newBox.addEventListener("click", function(){onSiteDivMouseOver(link,text)});
 //	newBox.addEventListener("mouseout", onSiteDivMouseOut(link));
 	canvas.appendChild(newBox);
 }
 
-function onSiteDivMouseOver (link){
+function onSiteDivMouseOver (link,text){
 	var scale = .4;
 	$("#preview").empty();
 	$("#preview").slideDown("1000");
 	$("#map-layout").slideUp("1000");
     //document.getElementById("preview").innerHTML = "";
+    $("#previewh2").html("Preview of " + text);
 	var ifrm = document.createElement("iframe");
 	ifrm.id = "ifrm-site";
 	document.getElementById("preview").appendChild(ifrm);
