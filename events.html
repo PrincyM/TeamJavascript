@@ -6,9 +6,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani:700" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>	
 	
+	
 	<link rel="stylesheet" type="text/css" href="style/events.css">
 	<link rel="stylesheet" type="text/css" href="style/common.css">
-	<script src="javascript/careers.js"></script>
+	<script src="javascript/events.js"></script>
 	<title>Comrad Cafe</title>
 
 	<!-- <script type="text/javascript" src="header.js"></script> -->
@@ -98,9 +99,9 @@
 </div>
 			</article>
 			<section>
-	<div class="form-field">
+	<div class="form-field" id="formwrapper">
 	
-		<form class="work-form" action="events.html" method="post">
+		<form class="work-form" id="comradeform" action="events.html" method="post">
 		<div>
 		
 	    <label for="name">Comrade's Name:</label>
@@ -116,18 +117,28 @@
 		<label for="date">Date of Revolution:</label>
 		<input type="date" id="date" name="date" max="2020-12-12" min="2018-01-01>
 		</div>
-	  <input type="hidden" id="hiddeninfo" name="hiddeninfo" value="This is hidden" />
+	
 	  <div>
 		<label for="message">Details:</label>
 	  </div>
       <div>
-	    <textarea id="message" name="message" placeholder="Test..."></textarea>
+	    <textarea id="message" name="message" placeholder="Your Message..."></textarea>
 	  </div>
       <button type="submit" id="submit" name="submit">Submit</button>
 		</form>
 	</div>
 	</section>
-	
+	<div id="displayform" class="hide">
+	<h2>Booking Confirmed</h2>
+	<h3>Name of Booker:</h3>
+	<p id="displayname"></p>
+	<h3>Email:</h3>
+	<p id="displayemail"></p>
+	<h3>Date of Booking</h3>
+	<p id="displaydate"></p>
+	<h3>Booking Message</h3>
+	<p id="displaymessage"></p>>
+	</div>
 			
 		</main>
 		</div>
