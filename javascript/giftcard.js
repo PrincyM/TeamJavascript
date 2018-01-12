@@ -100,8 +100,25 @@ function onMessageChange(){
 		$("#periwinkle_marx").show();
 	});
 
+//functionality for bottom buttons
+
+	$("#btn_submit").click(function(){
+		$("#giftcard_form").hide();
+		$("#txtbox_message").hide();
+	});
+	
+	$("#btn_reset").click(function(){
+		$("#giftcard").css("background-color", "white");
+		$("#original_logo").show();
+		$("#red_star").hide();
+		$("#green_star").hide();
+		$("#copper_star").hide();
+		$("#olive_marx").hide();
+		$("#purple_marx").hide();
+		$("#periwinkle_marx").hide();
+	});
 
 
 
-})//end of ready function starting at line 1
+});//end of ready function starting at line 1
 

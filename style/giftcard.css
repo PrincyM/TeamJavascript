@@ -95,7 +95,7 @@ label {
 	min-height: 2.25em;
 }
 
-/*-----BUTTONS*/
+/*-----INPUTS*/
 /*background*/
 
 #btn_bg_grey{
@@ -126,6 +126,29 @@ label {
 #btn_periwinle_marx{
 	background-color: #46407f;
 }
+
+/*BUTTONS*/
+
+#bottom_btn_div{
+	padding-left: 41%;
+	padding-top: 2.5%;
+}
+.btn_bottom{
+	min-width: 5em;
+	min-height: 2em;
+	background-color: #777;
+	border-radius: 10px;
+	background-color:#594A42;
+	border:2px solid #AC2430;
+	font-family: 'Rajdhani', sans-serif;
+	color: white;
+	font-size: 1.25em;
+}
+.btn_bottom:hover{
+	cursor: pointer;
+	background-color:#CCCC98;
+}
+
 
 
 
