@@ -32,10 +32,13 @@ main
 
 .menu-details
 {
-	white-space: pre-wrap;
+	/*white-space: pre-wrap;*/
+  background-color: white;
+  text-align: left;
+  width: 500px;
 }
 
-#menu_img
+.menu_img
 {
 	width: 500px;
 	height: 350px;
@@ -46,6 +49,26 @@ main
 {
   text-align: center;
 }
+
+#appetizer_id {
+  position: absolute;
+}
+
+.menu-desc li
+{
+  text-decoration: none;
+}
+
+.menu-desc
+{
+  list-style: none;
+}
+/*.menu-desc {
+  text-align: left;
+}*/
+
+
+/*image overlay*/
 
 /*.container {
   position: relative;
@@ -84,131 +107,4 @@ main
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   white-space: nowrap;
-}*/
-/* body{
-	margin:0;
-}
-*, *::before, *::after{
-	box-sizing: border-box;
-}
-
-nav{
-	text-align: center;
-}
-#header{
-	border-bottom: 5px solid #AC2430;
-	height: 10em;
-	position: relative;
-
-}
-#main-menu{
-
-}
-#main-menu a{
-	text-decoration: none;
-	color:#594A42;
-	font-weight: bold;
-	font-size: 1.5em;
-}
-#main-menu a:hover{
-	background-color: #594A42;
-	color: #cccc98;
-}
-#main-menu ul li{
-	display:inline-block;
-	margin-right: 10px;
-	color: #594A42;
-}
-#menu-container
-{
-	/*position: absolute;
-	/*bottom: 0px;*/
-	/*text-align: center;
-	vertical-align: bottom;
-}
-.page-wrapper
-{
-	/*max-width: 1024px;*/
-	/*background:#cccc98;*/
-	/*margin:0 auto;
-	border:1px solid black;
-
-	background-image: url("images/watermark_1925px.png");
-	background-size: contain;
-	height: 100%;
-  margin: auto;
-}
-
-p, .menu-content, .main-menu
-{
-	text-align: center;
-}
-
-.menu li
-{
-	display: inline-block;
-	text-align: center;
-}
-
-.menu li img
-{
-	text-align: center;
-}
-
-.menu ul
-{
-	list-style: none;
-}
-
-.menu-title
-{
- text-align: center;
-}
-
-img
-{
-	width: 300px;
-	height: 300px;
-	max-width: 100%;
-}
-
-#appetizers_img, #lunch_img, #dinner_img
-{
-	width: auto;
-}
-
-#specials_img, #desserts_img
-{
-	height: auto;
-}
-
-
-
-/*#menu-row-1
-{
-	width: 80%;
-	align-items: center;
-}
-
-.col-big
-{
-	width: 630px;
-	height: 400px;
-}
-
-.col-1
-{
-	float: left;
-	background-image: url("/images/appetizers.jpeg");
-}*/
-
-/*.section-title {
-    font-family: "BrandonGrotesque-Bold";
-    font-size: 44px;
-    font-style: normal;
-    letter-spacing: 2px;
-    line-height: 51px;
-    margin-top: 0;
-    text-align: center;
-    text-transform: uppercase;
 }*/

@@ -1,19 +1,21 @@
 
 // alert("connected");
+// jQuery(document).ready(function () {
+//
+// $('.menu-details').hide();
+// // $('.menu-heading').hide();
+//
+// $('.menu-heading').click(function() {
+//   $(this).next('.menu-details').slideToggle(1000);
+// })
+// });
+
 jQuery(document).ready(function () {
 
-// $('p').hide();
+$('.menu-details').hide();
+// $('.menu-heading').hide();
 
-// $('img').click(function() {
-//  $('.contentBox').hide();
-// $(this).next('p').slideToggle(3000);
-//
-// })
-//
-// $('p').hover(
-// function() { $('p').css({'background': '#FFE5C3', 'color': '#524737'});}, // multiple css elements should include curly brackets
-// function() { $('p').css({'background': '#524737', 'color': '#FFE5C3'});}
-//
-// );
-
+$('.menu-heading').click(function() {
+  $(this).next('#appetizer_id').slideToggle(2000);
+})
 });
