@@ -11,11 +11,15 @@ html{
 	
 }
 
+
+
 .headerbox {
 	text-align:center;
 	font-size:3.0rem;
 	margin: 1em;
 }
+
+/* Flexboxes uses to contain mask photo and column layout, along with the russian calendar */
 
 .articleflex {
 		display:flex;
@@ -52,7 +56,7 @@ max-width:100%;
 
 
 
-/* Form Styling */
+/* ---------Form Styling ------------*/
 
 
 .form-heading, .form {
@@ -83,7 +87,7 @@ max-width:100%;
     text-align: center;
 }
 
-#name, #email, #message {
+#name, #email, #message, #datepicker {
   height: 50px;
   width: 500px;
  border: 2px solid rgba(0,0,0,.1); 
@@ -121,6 +125,9 @@ max-width:100%;
 #submit {
   background-color: #AC2430;
   color: #FCF9CE;
+  margin-left:40%;
+  margin-right:40%;
+ width:20%;
 }
 
 
@@ -134,54 +141,76 @@ max-width:100%;
 Invoice Stuff. (Used Giftcard settings)
 ------------------------
 */
-#hidebooking {
-	display: none;
+#hidebooking{
+	margin-top:2em;
+	display: none; 
 }
 
+/* main invoice formatting */
+
 #giftcard{
-	border:6px solid #AC2430;
+	border:1px solid black;
 	width: 80%;
 	min-height: 18em;
 	background-color: white;
-	display:flex;
 	margin-left: 10%;
-}
-.pic_side{
-	max-height: 12em;
-	margin-top: 15%;
-	margin-right: 12%;
-	float: right;
-	z-index: auto;
+	min-height:35em;
 }
 
-.marxcolours{
-	max-height: 4em;
-	z-index: 1;
-	position: absolute;
-	top:39%;
-	left:31%;
-}
+
+
 
 #gcHeader{
 	text-align: center;
 	color: #594A42;
 	font-size: 2em;
-}
+	
+	}
+	
+#
 .sidecontainer{
-	flex:1 0 0;
+	/* flex:1 0 100%;
+	justify-content:center;
+	*/
+	min-height:40em;
+	padding-left:20%;
+	padding-right:20%;
+	
 	position: relative;
 }
 
-.gc_labels {
-	padding-left:0.5em;
+
+/* Invoice Red Line Under header */
+#headerred {
+	border-bottom: 1px solid #AC2430;
+	margin-left:10%;
+	margin-right:10%;
+
 }
-
-/*----WRITING IN CARD*/
-
+/*----Stuff in Invoice
 #from, #to, #amount, #message2{
-	padding-left: 0.5em;
+	/*padding-left: 0.5em; */
 }
 #from_name, #to_name, #gift_amount, #gift_message{
+	/*
 	padding-left: 0.8em;
+	*/
 	margin-top: -25px;
+	
 }
+
+
+/*-- invoice box padding -- */
+#padder {
+	padding-left:10%;
+	padding-right:10%;
+}
+
+/* Jquery Date Stuff */
+.container {
+  width: 600px;
+  padding: 20px;
+  margin: auto;
+  background: #ddd;
+}
+
