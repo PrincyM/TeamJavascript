@@ -30,10 +30,10 @@ function drawMenu(){
 	$("#menu").append("<div id=\"level\"></div>");
 	$("#level").append("<label>Level:</label>");
 	$("#level").append($("<input id=\"btn_easy\" type=\"button\" value=\"easy\"></input>").click(easyTicTacToe));
-	$("#level").append($("<input id=\"btn_hard\" type=\"button\" value=\"hard\"></input>").click(hardTicTacToe));
+	$("#level").append($("<input id=\"btn_hard\" type=\"button\" value=\"hard*\"></input>").click(hardTicTacToe));
 	$("#menu").append("<div id=\"side\"></div>");
 	$("#side").append("<label>Side:</label>");
-	$("#side").append($("<input id=\"btn_all\" type=\"button\" value=\"allies\"></input>").click(allTicTacToe));
+	$("#side").append($("<input id=\"btn_all\" type=\"button\" value=\"marxism\"></input>").click(allTicTacToe));
 	$("#side").append($("<input id=\"btn_comm\" type=\"button\" value=\"communism\"></input>").click(commTicTacToe));
 	$("#menu").append($("<input id=\"btn_start\" type=\"button\" value=\"start\"></input>").click(loadTicTacToe));
 	$("#btn_hard").addClass("pressed");

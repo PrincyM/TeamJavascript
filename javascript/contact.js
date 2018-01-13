@@ -37,6 +37,7 @@ if(ok){
   $('.middle').hide();
   $('.image').hide();
   $('#form').hide();
+  $('#contact-msg').hide();
    $('#thanksCustomer').html($('#name').val());
    $('#thanksEmail').html($('#email').val());
   $('#thanks_msg').show();

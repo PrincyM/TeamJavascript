@@ -21,7 +21,7 @@ main
 {
 
 	margin: 0 auto;
-  display: inline-block;
+  display: inline-flex;
 	text-align: center;
 
 }
@@ -32,10 +32,10 @@ main
 
 .menu-details
 {
-	/*white-space: pre-wrap;*/
-  background-color: white;
+  /*background-color: white;*/
   text-align: left;
   width: 500px;
+	margin-top: 13%;
 }
 
 .menu_img
@@ -45,66 +45,67 @@ main
 	padding: 15px;
 }
 
-#comrade-specials-div, #four-sections
+
+#four-sections
 {
   text-align: center;
 }
 
-#appetizer_id {
+#appetizer_id, #lunch_id, #dinner_id, #desserts_id, #specials_id {
   position: absolute;
 }
 
 .menu-desc li
 {
   text-decoration: none;
+	color:  #AC2430;
+
 }
 
 .menu-desc
 {
   list-style: none;
 }
-/*.menu-desc {
-  text-align: left;
-}*/
 
 
-/*image overlay*/
-
-/*.container {
-  position: relative;
-  width: 50%;
+.gallery-item {
+    position: relative;
 }
 
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
+    .gallery-item:first-child {
+        /*margin-right: 2.762430939%;*/
+    }
+
+.gallery-item img {
+    /*width: 100%;*/
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 100%;
-  right: 0;
-  background-color: #008CBA;
-  overflow: hidden;
-  width: 0;
-  height: 100%;
-  transition: .5s ease;
+.gallery-item:hover .img-title {
+    /*opacity: 0.1;*/
 }
 
-.container:hover .overlay {
-  width: 100%;
-  left: 0;
+.img-title {
+    position: absolute;
+    top: 0;
+    margin:0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    /*opacity: 0;*/
+    display: none; /* comment this out for CSS hover */
+    /*background-color: #AC2430;*/
+    /*transition: all 0.5s ease;*/
 }
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  white-space: nowrap;
+#last-section
+{
+	width: 50%;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+}
+
+/*#comrade-specials-div .img-title {
+	width: 50%;
+	margin-left: 270px;
 }*/

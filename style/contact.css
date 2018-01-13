@@ -108,7 +108,7 @@ main
   margin-bottom: 60px;
 }
 
-.work-form button {
+#work-form button {
   height: 50px;
   border:0;
   background-color:#faa916;
@@ -137,7 +137,7 @@ main
 
 #thanks_msg
 {
-  height: 200px;
+  height: 230px;
 	text-align: center;
 }
 
