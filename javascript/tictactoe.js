@@ -13,7 +13,7 @@ class Tictactoe{
 
 	load(pcstart){
 		//show a welcome message
-		$("#messages").css("color", "black");
+		$("#messages").css("color", "#594A42");
 		animateText("messages", "Welcome dear comrade!",2);
 
 		//create all the divs for the board
@@ -327,7 +327,7 @@ function drawInicialField(){
 
 function updateField(user, pos, pcstart){	
 
-	var images = [["\"images/alogo.png\"","alogo"],["\"images/clogo.png\"","clogo"]];
+	var images = [["\"images/contest/icon.png\"","icon"],["\"images/contest/clogo.png\"","clogo"]];
 	// console.log(images);
 	// console.log(images[0]);
 	if(user == 1)
@@ -373,38 +373,53 @@ function updateField(user, pos, pcstart){
 // draw UI depending on the user who won, 0 for draw, 1 for PC and 2 for user
 function drawResult(user, winningLine){
 	//hide label for messages;
+	this.winner = user;
 	$("#messages").css("color","#FCF9CE");	
 
 	//start canvas
  	$("#game").append("<canvas id=\"drawing\"></canvas"); 	
  	$("#drawing").addClass("draws");
+ 	$("#drawing").attr("width","800px");
+ 	$("#drawing").attr("height","600px");
 
  	//draw winning line.
  	var ctx = document.getElementById("drawing").getContext('2d');
  	ctx.beginPath();
- 	var xdiv6 = 300/6;
- 	var ydiv6 = 150/6; 
+ 	var xdiv6 = 800/6;
+ 	var ydiv6 = 600/6; 
  	var x = parseInt(winningLine.substring(1,2))*xdiv6*2 + xdiv6;
  	var y = parseInt(winningLine.substring(0,1))*ydiv6*2 + ydiv6;
  	var xy1 = {x,y};
  	x = parseInt(winningLine.substring(3,4))*xdiv6*2+xdiv6;
  	y = parseInt(winningLine.substring(2,3))*ydiv6*2+ydiv6;
  	var xy2 = {x,y};
- 	ctx.lineWidth = 2;
+ 	ctx.lineWidth = 10;
+ 	ctx.strokeStyle = "#594A42"
  	ctx.moveTo(xy1['x'], xy1['y']);
  	ctx.lineTo(xy2['x'], xy2['y']);
  	//show a result message
 
  	ctx.stroke();
  	//go back to the main menu or show a new menu 
- 	setTimeout(blurDivs, 1000);
+ 	setTimeout(blurDivs, 1000,ctx);
 }
 
-function blurDivs()
-{
+function blurDivs(ctx)
+{	
+
 	for (var i = 0; i < 3 ; i++) 
 		for (var j = 0; j < 3; j++)
 			$("#" + i + j ).addClass("blur");	
+	
+	ctx.lineWidth = 1;
+	ctx.font = '80px Rajdhani';
+	ctx.fillStyle = '#AC2430'
+	if(this.winner != 1)
+	{
+		ctx.fillText("You Win!",220,300);
+	}
+	else
+		ctx.fillText("You Loose!",220,300);
 	
 }
 

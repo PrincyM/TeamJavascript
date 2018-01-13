@@ -12,7 +12,7 @@
 
 
 //we define this herarchy for the page. if it changes, we just have to change this 2 arrays
-var mainSections = ["Products/Services","Location","Site Map","Constest","About Us"];
+var mainSections = ["Products/Services","Location","Site Map","Contacttest","About Us"];
 var secSections = [["Menu", "Specials", "Gift Cards","Events/Booking"],[]
 	,[] ,[] ,["Contact Us", "Carreers"]];
 var mainSectionsLinks = ["Products/Services","location.html","site-map.html","contest.html","aboutus.html"];

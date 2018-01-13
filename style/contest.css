@@ -1,6 +1,6 @@
 
 #game{
-	height: 360px;
+	height: 370px;
 	width: 640px;
 	border:2px solid #AC2430;
 	margin:0 auto;
@@ -20,6 +20,9 @@
 
 #btn_reset{
 	text-align: center;
+}
+#btn_reset p{
+	color:#594A42;
 }
 #messages{
 	display: block;
@@ -77,9 +80,9 @@ input{
 	background-position: center;
 	background-repeat: no-repeat;
 }
-.alogo{
+.icon{
 	/*background-image: url("images/clogo.png");*/
-	background-size: 80%;
+	background-size: 48%;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -97,7 +100,6 @@ input{
 	left: 0px;
 	height: 358px;
 	width: 638px;
-	border:1px dashed red;
 
 }
 .blur{
