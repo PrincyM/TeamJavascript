@@ -12,10 +12,20 @@
 
 jQuery(document).ready(function () {
 
-$('.menu-details').hide();
+// $('.menu-details').hide();
 // $('.menu-heading').hide();
 
 $('.menu-heading').click(function() {
-  $(this).next('#appetizer_id').slideToggle(2000);
-})
+  $(this).next('.menu-details').slideToggle(1000);
+});
+
+
+
+$('.gallery-item').hover( function() {
+        $(this).find('.img-title').fadeIn(300);
+    }, function() {
+        $(this).find('.img-title').fadeOut(100);
+    });
+
+
 });
