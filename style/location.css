@@ -1,8 +1,46 @@
+
+/*TITLE AND FONT*/
+
 #header_location{
 	color: #594A42;
-	margin-left: 45%;
-	font-size: 2em;
+	margin-left: 40%;
+	font-size: 3em;
 }
+h3{
+	color: #594A42;
+	font-size: 1.75em;
+}
+p{
+	color: #594A42;
+}
+
+
+/*FLEXBOX*/
+
+#scarberia-wrapper{
+	display: flex;
+}
+.location_flex_1{
+	flex:1 0 0;
+}
+#middle_box{
+	
+}
+
+
+
+	
+#scarberia_pic{
+	max-height: 12em;
+	padding-bottom: 1em;
+}
+#trendy_cafe{
+	max-height: 12em;
+}
+
+/*MAP*/
+
 #map {
 	height: 500px;
-}	
+}
+
