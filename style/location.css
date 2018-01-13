@@ -2,18 +2,25 @@
 
 main{
 	max-width: 60%;
-	/*padding-left: 15%;*/
+	margin-left: 22%;
 }
 
+/*MAP*/
 
-
+#map {
+  height: 500px;
+  margin-top: 20px;
+}
 
 /*TITLE AND FONT*/
 
 .headers{
 	color: #594A42;
-	margin-left: 40%;
+	margin-left: 28%;
 	font-size: 3em;
+}
+#h2_locations{
+  margin-left: 35%;
 }
 h3{
 	color: #594A42;
@@ -36,23 +43,13 @@ p{
 #middle_box{
 	text-align: center;
 }
-
-
-
-	
 #scarberia_pic{
+  min-height: 12.75em;
 	max-height: 12em;
 	padding-bottom: 1em;
 }
 #trendy_cafe{
 	max-height: 12em;
-}
-
-/*MAP*/
-
-#map {
-	height: 500px;
-	margin-top: 20px;
 }
 
 /*FORM*/
@@ -92,6 +89,16 @@ p{
   box-sizing: border-box;
    outline: none;
 }
-#field_city:focus, #field_address:focus, #mfield_PC:focus {
+#field_city:focus, #field_address:focus, #field_PC:focus {
    border: 2px solid #AC2430;
 }
+#submit-field{
+  
+  text-align: center;
+}
+
+
+
+
+
+

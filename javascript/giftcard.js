@@ -27,7 +27,6 @@ function onFnameChange(){
 	var a = $("#fname").val();
 	$("#from_name").html(a);
 }
-
 function onToNameChange(){
 	var a = $("#to_giftee").val();
 	$("#to_name").html(a);

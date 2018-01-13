@@ -2,13 +2,10 @@
 <html>
 <head>
 	<title>Location</title>
-		<link rel="shortcut icon" href="images/icon.ico" />
+	<link rel="shortcut icon" href="images/icon.ico" />
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani:700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/common.css">
 	<link rel="stylesheet" type="text/css" href="style/location.css">
-
-	
-
 </head>
 <body>
 	<div id="pagewrap">
@@ -66,7 +63,7 @@
 			</div>
 		</header>
 		<main>
-			<h2 class="headers">Locations</h2>
+			<h2 class="headers" id="h2_locations">Locations</h2>
 				<div class="location_flex_1" id="scarberia-wrapper">
 					<div id="column_left_scarberia">					
 						<img id="scarberia_pic" src="images/location/scarberia.jpg" alt="woman drinking tea in cold weather">
@@ -85,30 +82,43 @@
 
 
 <!-- MAP SECTION -->
-  				<div id="map"></div>
+  				<!-- <div id="map"></div> -->
+
+
+  				<div id="map-canvas" height="500" width="500"></div>
+				<iframe 
+  					id="iframe"
+  					width="700"
+  					height="550"
+  					frameborder="0" 
+  					style="border:0"
+  					src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB-_hQ1jJbLvEGWUK4sYD412b194evXlbw
+   					 &q=43.744136,-79.211772" allowfullscreen>
+					</iframe>
+				
 
   <!-- FORM -->
-  				<h2 class="headers">Find Your Way</h2>
+  				<h2 class="headers" id="h2_find_your_way">Find Your Way</h2>
 
 
-				<form class="work-form" action="" method="post">
+				<form id="form" class="work-form" action="" method="post">
 				    <div class="form-field">
 				       <label for="name"></label>
-				       <input type="text" id="field_city" name="user_name" placeholder="Your city..." />
+				       <input type="text" id="field_city" placeholder="Your city..." />
 				    </div>
 				    <div class="form-field">
 				       <label for="email"></label>
-				       <input type="text" id="field_address" name="user_email" placeholder="Your address..." />
+				       <input type="text" id="field_address" placeholder="Your address..." />
 				    </div>
 				    <div class="form-field">
 				       <label for="message"></label>
-				       <input type="text" id="field_PC" name="user_message" placeholder="Your postal code..." />
+				       <input type="text" id="field_PC" placeholder="Your postal code..." />
 				    </div>
 				    <div id="submit-field">
-				     	<button type="submit" id="submit" name="submit">WALK</button>
-				        <button type="submit" id="submit" name="submit">PUBLIC TRANSPORT</button>
-				        <button type="submit" id="submit" name="submit">CAR</button>
-				        <button type="submit" id="submit" name="submit">BIKE</button>
+
+				    <button id="submit" onClick="enter()">Enter</button/>
+				        
+
 				   </div>
 				</form>
     
@@ -179,9 +189,10 @@
 		</footer>
 
 </body>
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="javascript/location.js"></script>
-	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUm4CECgqiPy89D9yQ3tKA90u_kDSp5f8&callback=initMap"
-    async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<!--     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUm4CECgqiPy89D9yQ3tKA90u_kDSp5f8&callback=initMap"
+    async defer></script> -->
 </html>
