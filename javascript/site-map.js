@@ -46,7 +46,7 @@ function drawLayout(){
 	var margin = 30;
 
 //First we draw the home. only 1 block in that row.
-	draw((canvasWidth-boxWidth)/2,margin,boxWidth,boxHeigth,"Home","home.html");
+	draw((canvasWidth-boxWidth)/2,margin,boxWidth,boxHeigth,"Home","index.html");
 
 
 //now we define some properties of the main sections

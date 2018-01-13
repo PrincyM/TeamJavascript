@@ -43,7 +43,7 @@ GIFTCARD
 
 /*----WRITING IN CARD*/
 
-#from, #to, #amount, #message{
+#from, #h2_to, #amount, #message{
 	padding-left: 0.5em;
 }
 #from_name, #to_name, #gift_amount, #gift_message{
@@ -51,14 +51,11 @@ GIFTCARD
 	margin-top: -25px;
 }
 
-
 /*----------------------
 FORM STYLING
 ----------------------*/
 
 /*---LEFT SIDEBAR*/
-
-
 
 #giftcard_form{
 	display: flex;
@@ -78,23 +75,35 @@ label {
 #messagetxtbox{
 	min-height: 12em;
 	min-width: 20em;
-	margin-top: 1.5em;
+	margin-top: 1em;
+	border: 2px solid rgba(0,0,0,.1);
+	border-radius: 10px;
 }
 #txtbox_message{
-	padding-left: 40%;
-	padding-top: 3%;
+	padding-left: 45%;
+	padding-top: 2%;
 }
 #fname{
 	min-width: 17em;
 	min-height: 2.25em;
 }
 #to_giftee{
-	min-width: 20.5em;
-	min-height: 2.25em;
+	min-width: 20em;
+	/*min-height: 2.25em;*/
 }
 #input_amount{
-	min-width: 14em;
+	min-width: 14.75em;
 	min-height: 2.25em;
+}
+#fname, #to_giftee, #input_amount{
+	border: 2px solid rgba(0,0,0,.1);
+  	font-family:'Rajdhani', sans-serif;
+  	border-radius: 10px;
+  	padding: 7px;
+  	font-size: 14px;
+}
+#fname:focus, #to_giftee:focus, #input_amount:focus, #messagetxtbox:focus{
+	border: 2px solid #AC2430;
 }
 
 /*-----INPUTS*/
@@ -132,7 +141,7 @@ label {
 /*BUTTONS*/
 
 #bottom_btn_div{
-	padding-left: 41%;
+	padding-left: 46%;
 	padding-top: 2.5%;
 }
 .btn_bottom{
