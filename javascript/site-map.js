@@ -15,9 +15,9 @@
 var mainSections = ["Products/Services","Location","Site Map","Constest","About Us"];
 var secSections = [["Menu", "Specials", "Gift Cards","Events/Booking"],[]
 	,[] ,[] ,["Contact Us", "Carreers"]];
-var mainSectionsLinks = ["Products/Services","Location","site-map.html","contest.html","aboutus.html"];
-var secSectionsLinks = [["Menu", "Specials", "Gift Cards","Events/Booking"],[]
-	,[] ,[] ,["Contact Us", "Carreers"]];
+var mainSectionsLinks = ["Products/Services","location.html","site-map.html","contest.html","aboutus.html"];
+var secSectionsLinks = [["menu.html", "Specials", "giftcard.html","events.html"],[]
+	,[] ,[] ,["contact.html", "careers.html"]];
 
 var canvas;
 window.onload = function(){
