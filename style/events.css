@@ -52,7 +52,7 @@ max-width:100%;
 
 
 
-
+/* Form Styling */
 
 
 .form-heading, .form {
@@ -86,7 +86,7 @@ max-width:100%;
 #name, #email, #message {
   height: 50px;
   width: 500px;
-  border: 2px solid rgba(0,0,0,.1);
+ border: 2px solid rgba(0,0,0,.1); 
   font-family:'Rajdhani', sans-serif;
   border-radius: 10px;
   padding: 20px;
@@ -126,4 +126,62 @@ max-width:100%;
 
 #name:focus, #email:focus, #message:focus {
    border: 2px solid #AC2430;
+}
+
+
+/* 
+------------------------
+Invoice Stuff. (Used Giftcard settings)
+------------------------
+*/
+#hidebooking {
+	display: none;
+}
+
+#giftcard{
+	border:6px solid #AC2430;
+	width: 80%;
+	min-height: 18em;
+	background-color: white;
+	display:flex;
+	margin-left: 10%;
+}
+.pic_side{
+	max-height: 12em;
+	margin-top: 15%;
+	margin-right: 12%;
+	float: right;
+	z-index: auto;
+}
+
+.marxcolours{
+	max-height: 4em;
+	z-index: 1;
+	position: absolute;
+	top:39%;
+	left:31%;
+}
+
+#gcHeader{
+	text-align: center;
+	color: #594A42;
+	font-size: 2em;
+}
+.sidecontainer{
+	flex:1 0 0;
+	position: relative;
+}
+
+.gc_labels {
+	padding-left:0.5em;
+}
+
+/*----WRITING IN CARD*/
+
+#from, #to, #amount, #message2{
+	padding-left: 0.5em;
+}
+#from_name, #to_name, #gift_amount, #gift_message{
+	padding-left: 0.8em;
+	margin-top: -25px;
 }

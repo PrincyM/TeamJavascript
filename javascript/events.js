@@ -16,7 +16,7 @@ function submitForm() {
 
 		
 
-        document.getElementById('displayform').style.display = "block";
+        document.getElementById('hidebooking').style.display = "block";
 	
 		document.getElementById('displayname').innerHTML = formName;
 		document.getElementById('displayemail').innerHTML = formEmail;

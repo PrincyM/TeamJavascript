@@ -128,17 +128,41 @@
 		</form>
 	</div>
 	</section>
-	<div id="displayform" class="hide">
-	<h2>Booking Confirmed</h2>
-	<h3>Name of Booker:</h3>
-	<p id="displayname"></p>
-	<h3>Email:</h3>
-	<p id="displayemail"></p>
-	<h3>Date of Booking</h3>
-	<p id="displaydate"></p>
-	<h3>Booking Message</h3>
-	<p id="displaymessage"></p>>
-	</div>
+	
+
+	
+	
+	<!-- Start of Invisible Booking Confirmation -->
+			<div id="hidebooking">
+			<h2 id="gcHeader">Thank You! Here's Your Booking Confirmation:</h2>
+			<div id="giftcard">
+				
+				<div class="sidecontainer">
+					<div> <!-- div of gc labels -->
+						<h2 id="from">Name:</h2>
+						<p class="gc_labels" id="from_name"><span id="displayname"></span></p>
+					</div>	
+					<div>
+						<h2 id="to">Email:</h2>
+						<p class="gc_labels" id="to_name"><span id="displayemail"></span></p>
+					</div>
+					<div>
+						<h2 id="amount">Date of Revolution:</h2>
+						<p class="gc_labels" id="gift_amount"><span id="displaydate"></span></p>
+					</div>
+					<div>
+						<h2 id="message2">Message:</h2>					
+						<p class="gc_labels" id="gift_message"><span id="displaymessage"></span></p>
+					</div>
+				</div> 
+
+			</div> <!-- end of giftcard div -->
+	</div> <!--- end of hiding wrapper -->
+	
+	
+	
+	
+	
 			
 		</main>
 		</div>
