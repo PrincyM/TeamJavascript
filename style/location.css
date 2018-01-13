@@ -1,7 +1,16 @@
+/*OVERWRITES*/
+
+main{
+	max-width: 60%;
+	/*padding-left: 15%;*/
+}
+
+
+
 
 /*TITLE AND FONT*/
 
-#header_location{
+.headers{
 	color: #594A42;
 	margin-left: 40%;
 	font-size: 3em;
@@ -12,6 +21,7 @@ h3{
 }
 p{
 	color: #594A42;
+	margin-bottom: -10px;
 }
 
 
@@ -24,7 +34,7 @@ p{
 	flex:1 0 0;
 }
 #middle_box{
-	
+	text-align: center;
 }
 
 
@@ -42,5 +52,43 @@ p{
 
 #map {
 	height: 500px;
+	margin-top: 20px;
 }
 
+/*FORM*/
+
+
+.work-form button {
+  height: 50px;
+  border:0;
+  background-color:#AC2430;
+  color: #000;
+  border-radius: 10px;
+  padding:0.3em 1em;
+  text-transform:uppercase;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight:bold;
+  font-size:1em;
+  margin-top:1.2em;
+  cursor: pointer;
+  border: 1px solid #754f0a;
+}
+.form-field {
+    height: 50px;
+    font-size: 14px;
+    line-height: normal;
+    margin: 20px;
+    text-align: center;
+}
+#field_city, #field_address, #field_PC {
+  height: 50px;
+  width: 500px;
+  border: 2px solid rgba(0,0,0,.1);
+  font-family:'Rajdhani', sans-serif;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+  font-style: italic;
+  box-sizing: border-box;
+   outline: none;
+}
