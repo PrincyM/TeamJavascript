@@ -22,10 +22,10 @@ $('form').submit(function() {            // on submit of the form, validating in
   ok = false;
 }
 
-else if($('#email').val() == "" || $('#email').val() == null)
+else if($('#email').val() == "" || $('#email').val() == null || !validateEmail(userEmail))
   {
           $('#email').focus();
-          validateEmail(userEmail);           // check for user's input of email address against the pattern
+          alert("Enter a valid email address");
           ok = false;
    }
 else if($('#message').val() == "" || $('#message').val() == null)
