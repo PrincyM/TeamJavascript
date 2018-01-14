@@ -108,7 +108,6 @@ function onMessageChange(){
 		$("#txtbox_message").hide();
 		$("#thank_you_message").show();
 	});
-
 	
 	$("#btn_reset").click(function(){
 		$("#giftcard").css("background-color", "white");
@@ -123,16 +122,10 @@ function onMessageChange(){
 		$("#txtbox_message").show();
 		$("#thank_you_message").hide();
 
-		// $("#fname").html('your name goes here');
-		// $("#to_giftee").html('the giftee name goes here');
-		// $("#input_amount").html('the amount goes here');
-		// $("#messagetxtbox").html('the message goes here');
+		$("#from_name").html('your name goes here');
+		$("#to_name").html('the giftee name goes here');
+		$("#gift_amount").html('the amount goes here');
+		$("#gift_message").html('the message goes here');
 	});
-
-
-
-
-
-
 });//end of ready function starting at line 1
 
