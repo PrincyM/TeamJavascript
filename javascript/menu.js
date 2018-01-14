@@ -1,8 +1,36 @@
 
-
 $(document).ready(function () {
 
-//on hover functionality for menu 
+
+var todayDate = new Date();
+console.log(todayDate);
+var todayHours = todayDate.getHours();
+
+$('#availability-dinner').hide();
+$('#availability-lunch').hide();
+$('#availability-offers').hide();
+
+
+console.log(todayHours);
+
+if(todayHours > 12 && todayHours <= 16)
+{
+   $('#availability-dinner').show();             //show that dinner is not yet available as it is lunch time
+}
+
+else if(todayHours > 16 && todayHours <= 22)
+{
+
+  $('#availability-lunch').show();           // show that lunch is not available as it is dinner time
+}
+
+else if(todayHours < 18 && todayHours >19)           // show Comrade offers is available only between 6pm to 7pm
+{
+  alert("entered offers");
+  $('availability-offers').show();
+}
+
+//on hover functionality for menu
 
 $('.gallery-item').hover(
   function() {
