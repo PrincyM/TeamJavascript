@@ -106,3 +106,9 @@ main
 	display: block;
 	text-align: center;
 }
+
+#last-figure
+{
+	width:500px;
+	margin:0 auto;
+}
