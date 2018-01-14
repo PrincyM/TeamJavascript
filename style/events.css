@@ -128,8 +128,12 @@ max-width:100%;
   margin-left:40%;
   margin-right:40%;
  width:20%;
+
 }
 
+ #submit:hover {
+  background-color: #CCCC98;
+}
 
 #name:focus, #email:focus, #message:focus {
    border: 2px solid #AC2430;
@@ -213,4 +217,5 @@ Invoice Stuff. (Used Giftcard settings)
   margin: auto;
   background: #ddd;
 }
+
 
