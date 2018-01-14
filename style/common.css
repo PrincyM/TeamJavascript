@@ -74,8 +74,9 @@ nav{
 	font-size: 1.5em;
 }
 #main-menu a:hover{
-	/*background-color: #594A42;
-	color: #cccc98;*/
+
+	/*background-color: #594A42;*/
+	color: #e9b79d;
 }
 #main-menu ul li{
 	display:inline-block;
@@ -162,6 +163,9 @@ main{
 #footer-nav a{
 	text-decoration: none;
 	color:#fcF9ce;
+}
+#footer-nav a:hover{
+	color: #e9b79d;
 }
 .sidefooter{
 	flex:1 0 0;
