@@ -137,6 +137,10 @@ main
   border: 1px solid #754f0a;
 }
 
+#submit-field #submit:hover{
+  background-color: #CCCC98;
+	color: #000;
+}
 
 #submit-field #submit {
   background-color: #AC2430;
