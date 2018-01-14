@@ -49,7 +49,7 @@ p{
 	padding-bottom: 1em;
 }
 #trendy_cafe{
-	max-height: 12em;
+	min-height: 100px;
 }
 
 /*FORM*/
