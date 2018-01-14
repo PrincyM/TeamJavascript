@@ -15,21 +15,24 @@ $('form').submit(function() {            // on submit of the form, validating in
 
   // validating the form
   var ok = true;
+  var userEmail = $('#email').val();         // store user's e-mail input in userEmail
+
   if($('#name').val() == "" || $('#name').val() == null)  {
   $('#name').focus();
   ok = false;
 }
 
 else if($('#email').val() == "" || $('#email').val() == null)
-{
-   $('#email').focus();
-   ok = false;
-}
+  {
+          $('#email').focus();
+          validateEmail(userEmail);           // check for user's input of email address against the pattern
+          ok = false;
+   }
 else if($('#message').val() == "" || $('#message').val() == null)
-{
-$('#message').focus();
-ok = false;
-}
+   {
+         $('#message').focus();
+        ok = false;
+   }
 
 // end of validation
 if(ok){           // if validation is done, display thanks message
@@ -46,3 +49,13 @@ if(ok){           // if validation is done, display thanks message
 });
 
 });
+
+function validateEmail(userEmail) {
+  var emailPattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  if(emailPattern.test(userEmail)) {
+    return true;
+  }
+  else {
+    return false;;
+  }
+}
