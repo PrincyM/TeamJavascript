@@ -1,3 +1,6 @@
+html{
+	color:#594A42;
+}
 
 #careerstitle{
 	font-size:4rem;
@@ -55,7 +58,7 @@
 	padding-bottom:0 px !important;
 	text-align:center;
 }
-.menulist ul, li {
+.menulist ul {
     margin:0;
     padding:0;
     list-style:none;
@@ -64,10 +67,20 @@
 	/* position:relative; */
 }
 
-.menulist {
+.menulist li {
+    margin:0;
+    padding:0;
+    list-style:none;
+	font-size:1.25em;
+	
+	/* position:relative; */
+}
+
+.menulist{
     display: none;
 	position:absolute;
-	
+	list-style:none;
+	    list-style-type: none;
     background-color: #CCCC98;
     box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.3);
     padding: 10px 85px; 
@@ -80,3 +93,6 @@
 	cursor:pointer;
 }
 
+ul{
+	    list-style-type: none;
+}
