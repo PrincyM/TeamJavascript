@@ -20,7 +20,7 @@ main{
 	font-size: 3em;
 }
 #h2_locations{
-  margin-left: 35%;
+  padding-left: 10%;
 }
 h3{
 	color: #594A42;
@@ -43,14 +43,10 @@ p{
 #middle_box{
 	text-align: center;
 }
-#scarberia_pic{
-  min-height: 12.75em;
-	max-height: 12em;
-	padding-bottom: 1em;
+#scarberia_pic, #trendy_cafe{
+	padding-bottom: 2em;
 }
-#trendy_cafe{
-	min-height: 100px;
-}
+
 
 /*FORM*/
 

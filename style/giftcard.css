@@ -1,3 +1,6 @@
+/*DEFAULT OVERRIDES*/
+
+
 
 /* 
 ------------------------
@@ -9,8 +12,8 @@ GIFTCARD
 #giftcard{
 	border:6px solid #AC2430;
 	border-radius: 1em;
-	width: 45%;
-	min-height: 18em;
+	max-width: 450px;
+	min-height: 175px;
 	background-color: white;
 	display:flex;
 	margin-left: 28%;
@@ -27,8 +30,8 @@ GIFTCARD
 	max-height: 4em;
 	z-index: 1;
 	position: absolute;
-	top:39%;
-	left:31%;
+	top:110px;
+	left:65px;
 }
 
 #gcHeader{
@@ -78,10 +81,16 @@ label {
 	margin-top: 1em;
 	border: 2px solid rgba(0,0,0,.1);
 	border-radius: 10px;
+
 }
 #txtbox_message{
-	padding-left: 45%;
+	padding-left: 40%;
 	padding-top: 2%;
+}
+#txt_box_message_wrapper{
+	 margin-left: auto;
+  	margin-right: auto;
+	position: relative;
 }
 #fname{
 	min-width: 17em;
@@ -95,12 +104,13 @@ label {
 	min-width: 14.75em;
 	min-height: 2.25em;
 }
-#fname, #to_giftee, #input_amount{
+#fname, #to_giftee, #input_amount, #messagetxtbox{
 	/*border: 2px solid rgba(0,0,0,.1);*/
   	font-family:'Rajdhani', sans-serif;
   	border-radius: 10px;
   	padding: 7px;
   	font-size: 14px;
+  	outline: none;
 }
 #fname:focus, #to_giftee:focus, #input_amount:focus, #messagetxtbox:focus{
 	border: 2px solid #AC2430;
@@ -141,7 +151,7 @@ label {
 /*BUTTONS*/
 
 #bottom_btn_div{
-	padding-left: 46%;
+	padding-left: 43%;
 	padding-top: 2.5%;
 }
 .btn_bottom{
