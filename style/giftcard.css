@@ -162,8 +162,9 @@ label {
 	background-color:#594A42;
 	border:2px solid #AC2430;
 	font-family: 'Rajdhani', sans-serif;
-	color: white;
+	color: #FCF9CE;
 	font-size: 1.25em;
+	outline: none;
 }
 .btn_bottom:hover{
 	cursor: pointer;

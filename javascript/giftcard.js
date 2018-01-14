@@ -23,6 +23,9 @@ $(document).ready(function(){
 	$("#input_amount").on('input',onAmountChange);
 	$("#messagetxtbox").on('input',onMessageChange);
 
+//Functions to take user input and 
+//display their input on the giftcard immediately.
+
 function onFnameChange(){
 	var a = $("#fname").val();
 	$("#from_name").html(a);
@@ -105,6 +108,7 @@ function onMessageChange(){
 		$("#txtbox_message").hide();
 		$("#thank_you_message").show();
 	});
+
 	
 	$("#btn_reset").click(function(){
 		$("#giftcard").css("background-color", "white");
@@ -118,9 +122,14 @@ function onMessageChange(){
 		$("#giftcard_form").show();
 		$("#txtbox_message").show();
 		$("#thank_you_message").hide();
+
+		// $("#fname").html('your name goes here');
+		// $("#to_giftee").html('the giftee name goes here');
+		// $("#input_amount").html('the amount goes here');
+		// $("#messagetxtbox").html('the message goes here');
 	});
 
-//thank you message
+
 
 
 
