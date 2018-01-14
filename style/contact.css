@@ -1,3 +1,15 @@
+/************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. DEFAULT OVERRIDES
+ * 2. CONTACT US IMAGE OVERLAY
+ * 3. FORM
+ * 4. THANKS MESSAGE
+ ***********************************************/
+
+
+/* 1. DEFAULT OVERRIDES */
+
 html{
 	box-sizing: border-box;
 	font-family: 'Rajdhani', sans-serif;
@@ -10,6 +22,7 @@ main
   font-size: 1.5em;
 }
 
+/* 1. DEFAULT OVERRIDES */
 #contacts-img
 {
   width: 600px;
@@ -17,7 +30,7 @@ main
   margin: 15px;
 }
 
-/*image overlay*/
+/* 2. CONTACT US IMAGE OVERLAY */
 
 #contact-us-image-container
 {
@@ -61,7 +74,7 @@ main
   padding: 16px 32px;
 }
 
-/*form*/
+/* 3. FORM */
 
 .form-heading, #form {
   margin-left: auto;
@@ -134,6 +147,8 @@ main
 #name:focus, #email:focus, #message:focus {
    border: 2px solid #AC2430;
 }
+
+/* 4. THANKS MESSAGE */
 
 #thanks_msg
 {
