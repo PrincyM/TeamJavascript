@@ -11,7 +11,8 @@ $(document).ready(function(){
 
 function show_header(){
 	$("#header").slideToggle(1000);
-	$("#header").css("overflow","");
+	
+	setTimeout(changezindex,1000);
 }
 
 
@@ -37,3 +38,7 @@ function textFrame(text)
 {
 	$("#welcome_message").html(text);
 };
+
+function changezindex(){
+	$("#header").css("overflow","");
+}
