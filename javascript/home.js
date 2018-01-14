@@ -11,6 +11,7 @@ $(document).ready(function(){
 
 function show_header(){
 	$("#header").slideToggle(1000);
+	$("#header").css("overflow","");
 }
 
 

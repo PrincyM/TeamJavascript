@@ -31,7 +31,8 @@ class Tictactoe{
 			//setTimeout(play,2);
 		}
 		
-		$("#btn_pagain").removeAttr('disabled', )
+		$("#btn_pagain").removeAttr('disabled');
+		$("#btn_bmenu").removeAttr('disabled');
 	}
 
 ///////////////////////////////////////
