@@ -99,7 +99,7 @@ main
     display: none;
 }
 
-#last-section
+#availability-offers, #not-available-offers, #specials-heading
 {
 	width: 45%;
 	margin: 0 auto;
