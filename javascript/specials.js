@@ -17,13 +17,13 @@ window.onload = function(){
 
 	//build an array that will contain each day's corresponding special text
 	var onSpecial = new Array(7);
-	onSpecial[0] = "Coffee, 50% Off. (0.75)";
-	onSpecial[1] = "Stroganoff for Soviets, 50% Off. (10.99)";
-	onSpecial[2] = "Perogies with Bacon and Mushrooms, 50% Off. (5.00)";
-	onSpecial[3] = "Rosa's Butter Cookies, 50% Off. (8.00)";
-	onSpecial[4] = "Brother's Borscht, 50% Off (8.00)";
-	onSpecial[5] = "Caviar for Comrades, 50% Off (5.00)";
-	onSpecial[6] = "Olivier Salad, 50% Off (7.00)";
+	onSpecial[0] = "Coffee, 50% Off. ($0.75)";
+	onSpecial[1] = "Stroganoff for Soviets, 50% Off. ($10.99)";
+	onSpecial[2] = "Perogies with Bacon and Mushrooms, 50% Off. ($5.00)";
+	onSpecial[3] = "Rosa's Butter Cookies, 50% Off. ($8.00)";
+	onSpecial[4] = "Brother's Borscht, 50% Off ($8.00)";
+	onSpecial[5] = "Caviar for Comrades, 50% Off ($5.00)";
+	onSpecial[6] = "Olivier Salad, 50% Off ($7.00)";
 
 
 	//setup event listener for clicking the specials arrows
@@ -32,12 +32,13 @@ window.onload = function(){
 
 	//Execute Page Update (Uses today's values)
 	updatePage();
-	document.getElementById("main").style.display = "block";
-	//Display the flexbox (Done so it doesn't prematurely show)
 	
+	//Display the main page (I made it invisibile until the JS is done loading to avoid it looking garbled.)
+	document.getElementById("main").style.display = "block";
      
 
 	//function for clicking the left specials button
+	//This cycles effectively what day it is. Current day starts at whatever today's current day of the week is
 	function clickLeft() {
 	if (currentDay === 0) {
 		currentDay = 6;
@@ -49,7 +50,7 @@ window.onload = function(){
 	}
 	}
 	
-//function for clicking the right specials button.
+	//function for clicking the right specials button. Just like the left, but goes in the other direction.
 	function clickRight() {
 	if (currentDay === 6) {
 		currentDay = 0;
@@ -61,7 +62,7 @@ window.onload = function(){
 	}
 	}
 
-//function for writing the Day's settings to DOM
+	//function for writing the Day's settings to DOM
 	function updatePage(){
 	
 	//pull values from the Array, using the currentDay as a key, insert them into the dom
