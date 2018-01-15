@@ -21,7 +21,7 @@ class Tictactoe{
 		console.log(this.boardfield);
 		console.log("start load");
 		drawInicialField();
-		
+		this.pos = 0;
 
 		//if the AI starts, we ask the game to play its next move
 		this.pcstart = pcstart;
@@ -193,7 +193,21 @@ class Tictactoe{
 	decideNextPlay(){
 		var possibleplays = this.possiblePlaysArray();
 		var pos = this.checkNextWin(possibleplays,1);
-		console.log("check if we can win");
+		console.log(this.pos);
+		if(!this.pcstart && this.pos== 0)
+		{
+			this.pos=1;
+			console.log("only first time");
+			if(this.boardfield[0][0]==2)
+			{return "22";}
+			else if(this.boardfield[0][2]==2)
+			{return "20";}
+			else if(this.boardfield[2][0]==2)
+			{return "02";}
+			else if(this.boardfield[2][2]==2)
+			{return "00";}
+
+		}
 		if(pos != -1)
 			return pos;
 		pos = this.checkNextWin(possibleplays,2)
