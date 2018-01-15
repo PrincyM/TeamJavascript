@@ -2,6 +2,7 @@
 	display:none;
 }
 
+/*  Main daily special display box  */
 #flexspecial {
 		display:flex;
 	justify-content:center;
@@ -27,8 +28,6 @@
 	flex: 1 0 60%;
 	
 }
-
-
 
 #flexright{
 		order:3;
@@ -61,6 +60,7 @@
 	width:100%;
 }
 
+/*  header */
 #dstitle {
 	font-size: 3em;
 	margin:0.5em;
@@ -68,6 +68,7 @@ text-align: center;
 color:#594A42;
 }
 
+/* Day and description styling */
 #specday {
 		font-size: 3em;
 text-align: center;

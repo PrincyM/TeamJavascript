@@ -1,4 +1,4 @@
-// Datepicker UI function.
+// Setup and apply Datepicker UI function.
 $( function() {
     $( "#datepicker" ).datepicker();
   } );
@@ -7,8 +7,8 @@ $( function() {
 window.onload = function(){
 document.getElementById("comradeform").addEventListener('submit', submitForm);
 
-  //triggered on form submit:
-function submitForm() {
+  //Function that gets triggered upon form submission.
+		function submitForm() {
 		event.preventDefault();// Stop form from continueing
 		
 		//Load form values into variables
