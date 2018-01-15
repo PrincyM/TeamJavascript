@@ -27,8 +27,8 @@ window.onload = function(){
 
 
 	//setup event listener for clicking the specials arrows
-	document.getElementById("left").addEventListener('click', clickLeft);
-	document.getElementById("right").addEventListener('click', clickRight);
+	document.getElementById("leftt").addEventListener('click', clickLeft);
+	document.getElementById("rightt").addEventListener('click', clickRight);
 
 	//Execute Page Update (Uses today's values)
 	updatePage();
